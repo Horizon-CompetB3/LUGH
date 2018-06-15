@@ -16,7 +16,7 @@ class ArtisteFixtures extends Fixture implements OrderedFixtureInterface
         //Set test values in the table "Team" for 4 teams
         while ($i <= 10) {
             $artiste = new Artiste();
-            $artiste->setName("Artiste n°" . $i);
+            $artiste->setname("Artiste n°" . $i);
             $artiste->setemail($i . "@gmail.com");
             $artiste->setPassword($i);
             $artiste->setAdresse($i);

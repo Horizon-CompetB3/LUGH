@@ -1,15 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alexandresmagghe
- * Date: 15/06/2018
- * Time: 00:13
- */
 
 namespace App\Controller;
 
+use App\Repository\ProjetsRepository;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class AllProjetsController
+class AllProjetsController extends Controller
 {
+    /**
+     * @Route("/all-projets", name="all-projets")
+     */
+    public function AllProjets (ProjetsRepository $projetsRepository)
+    {
+        $projets = $projetsRepository->findAll();
 
+        return $this->render('Content/allprojets.html.twig', [
+            'controller_name' => 'AllProjetsController',
+            'projets' => $projets
+        ]);
+    }
 }

@@ -2,27 +2,26 @@
 
 namespace App\Form;
 
-use App\Entity\User;
+use App\Entity\Projets;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
-class UserType extends AbstractType
+class ProjetsType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', EmailType::class)
-            ->add('username', TextType::class)
-            ->add('plainPassword', RepeatedType::class, array(
-                'type' => PasswordType::class,
-                'first_options' => array('label' => 'Password'),
-                'second_options' => array('label' => 'Repeat Password'),
-            ));
+            ->add('name', TextType::class)
+            ->add('type', TextType::class)
+            ->add('entreprise', TextType::class)
+            ->add('orientation', TextType::class)
+            ->add('description', TextType::class)
+            ->add('budget', TextType::class)
+            ->add('largeur', TextType::class)
+            ->add('hauteur', TextType::class)
+            ->add('profondeur', TextType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -2,42 +2,54 @@
 
 namespace App\Controller;
 
-use App\Form\projetsType;
-use App\Entity\projets;
+use App\Entity\Projets;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Encoder\projetsPasswordEncoderInterface;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class RegistrationController extends Controller
+class AddProjetController extends Controller
 {
     /**
-     * @Route("/register", name="add_projets")
+     * @Route("/addprojets", name="addprojets")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
-    public function registerAction(Request $request)
+    public function newAction(Request $request)
     {
-// 1) build the form
-        $projets = new projets();
-        $form = $this->createForm(projetsType::class, $projets);
-// 2) handle the submit (will only happen on POST)
+// creates a projets and gives it some dummy data for this example
+        $projets = new Projets();
+
+        $form = $this->createFormBuilder($projets)
+            ->add('name', TextType::class)
+            ->add('type', TextType::class)
+            ->add('entreprise', TextType::class)
+            ->add('orientation', TextType::class)
+            ->add('description', TextType::class)
+            ->add('budget', IntegerType::class)
+            ->add('largeur', IntegerType::class)
+            ->add('hauteur', IntegerType::class)
+            ->add('profondeur', IntegerType::class)
+            ->add('image', FileType::class, array('label' => 'Image(JPG)'))
+            ->add('save', SubmitType::class, array('label' => 'Create projets'))
+            ->getForm();
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
-// 4) save the projets!
+
+            $projets = $form->getData();
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($projets);
             $entityManager->flush();
-// ... do any other work - like sending them an email, etc
-            //$message = (new \Swift_Message('Confirmation de compte'))
-                //->setFrom(['jolesport.iesa@gmail.com' => 'JolE-sport'])
-                //->setBody('Votre compte JolE-sport a bien été créé !');
-           // $mailer->send($message);
+
             return $this->redirectToRoute('home');
         }
-        return $this->render(
-            'Registration/addprojets.html.twig',
-            array('form' => $form->createView())
-        );
+
+        return $this->render('Registration/addprojet.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 }

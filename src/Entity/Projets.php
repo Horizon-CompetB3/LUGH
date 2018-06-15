@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProjetsRepository")
@@ -17,35 +19,42 @@ class Projets
     private $id;
 
     /**
-     * @ORM\Column(type="string", unique=true)
+     * @ORM\Column(type="string", length=55, unique=true)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="string", length=55, unique=true, nullable=true)
      */
     private $type;
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=55, unique=true)
      */
     private $entreprise;
     /**
-     * @ORM\Column(type="string", unique=true, length=64)
+     * @ORM\Column(type="string", unique=true, length=64, nullable=true)
      */
     private $artiste;
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string", length=64)
      */
     private $orientation;
     /**
-     * @ORM\Column(type="string", length=64)
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Ajouter une image jpg")
+     * @Assert\File(mimeTypes={ "image/jpeg" })
      */
-    private $photos;
+    private $image;
     /**
      * @ORM\Column(type="string", unique=true, length=150)
      */
     private $description;
     /**
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\Column(type="integer")
      */
     private $budget;
     /**
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\Column(type="integer")
      */
     private $largeur;
     /**
@@ -53,7 +62,7 @@ class Projets
      */
     private $hauteur;
     /**
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\Column(type="integer")
      */
     private $profondeur;
 
@@ -130,17 +139,17 @@ class Projets
     /**
      * @return mixed
      */
-    public function getPhotos()
+    public function getImage()
     {
-        return $this->photos;
+        return $this->image;
     }
 
     /**
-     * @param mixed $photos
+     * @param mixed $image
      */
-    public function setPhotos($photos)
+    public function setImage($image)
     {
-        $this->photos = $photos;
+        $this->image = $image;
     }
 
     /**
@@ -221,6 +230,22 @@ class Projets
     public function setProfondeur($profondeur)
     {
         $this->profondeur = $profondeur;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 
 

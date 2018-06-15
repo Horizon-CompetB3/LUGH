@@ -1,9 +1,8 @@
-{% extends "base.html.twig" %}
-{% block layout_content %}
+{% block body %}
 
     {% if invalid_email is defined %}
-        mytho, ton email existe pas
-    {% endif %}
+    mytho, ton email existe pas
+{% endif %}
     {{ form_start(form) }}
     <p>
         {{ form_label(form.email) }}

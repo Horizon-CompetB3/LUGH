@@ -3,3 +3,5 @@ easy_admin:
 #        # List the entity class name you want to manage
         - App\Entity\Artiste
         - App\Entity\Entreprise
+        - App\Entity\Projets
+        - App\Entity\Candidatures

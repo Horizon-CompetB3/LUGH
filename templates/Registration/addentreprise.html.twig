@@ -1,13 +1,11 @@
-{% extends "base.html.twig" %}
-{% block layout_content %}
-{% block register %}
 {{ form_start(form) }}
-    {{ form_row(form.username, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_row(form.name, { 'attr': {'class': 'form-control'} }) }}
     {{ form_row(form.email, { 'attr': {'class': 'form-control'} }) }}
     {{ form_row(form.plainPassword.first, { 'attr': {'class': 'form-control'} }) }}
     {{ form_row(form.plainPassword.second, { 'attr': {'class': 'form-control'} }) }}
-
+    {{ form_row(form.adresse, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_row(form.type, { 'attr': {'class': 'form-control'} }) }}
+    {{ form_row(form.secteur, { 'attr': {'class': 'form-control'} }) }}
 <button type="submit" class="btn btn-primary">Register!</button>
 {{ form_end(form) }}
-{% endblock %}
-{% endblock %}
+

@@ -1,9 +1,60 @@
 {% extends "base.html.twig" %}
 {% block layout_content %}
 
-    <h1>LUGH</h1>
-    <h2>La plateforme créative qui réunit artistes et entreprises</h2>
+    <div class="sidebar">
+        <nav>
+            <ul class=""><li class="active"><a href="/" data-text="deposer un projet"><div>deposer un projet</div></a></li>
+                <li><a href="/works" data-text="Voir les artistes"><div>Voir les artistes</div></a></li>
+                <li><a href="/contact" data-text="Contact"><div>Contact</div></a></li></ul>        </nav>
 
+    </div>
+    <section id="first-section" class="section-home">
+        <div id="first-section-content">
+    <div id="div-logo">
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.6 94.4"><title>Fichier 4</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path d="M0,4.2H16.2V61H51.3V74.2H0Z"/><path d="M113.1,20.4V74.2H98.3V67.8a20.78,20.78,0,0,1-7.4,5.35A23.36,23.36,0,0,1,81.6,75Q71,75,64.8,68.9T58.6,50.8V20.4H74.2V48.5q0,13,10.9,13a11.74,11.74,0,0,0,9-3.65Q97.49,54.21,97.5,47V20.4Z"/><path d="M183.1,20.4V65.2q0,14.8-7.7,22t-22.5,7.2a56.1,56.1,0,0,1-14.8-1.9A32.33,32.33,0,0,1,126.5,87l6.2-11.2a25.36,25.36,0,0,0,8.6,4.45,34.17,34.17,0,0,0,10.4,1.65q8.1,0,12-3.65t3.85-11V64.9q-6.1,6.7-17,6.7A28.49,28.49,0,0,1,137,68.35a24.82,24.82,0,0,1-9.75-9.15,25.58,25.58,0,0,1-3.6-13.6A25.58,25.58,0,0,1,127.2,32,24.82,24.82,0,0,1,137,22.85,28.49,28.49,0,0,1,150.5,19.6q11.7,0,17.8,7.7V20.4ZM163.75,55.15a12.41,12.41,0,0,0,3.95-9.55,12.41,12.41,0,0,0-3.95-9.55,16,16,0,0,0-20.35,0,12.31,12.31,0,0,0-4,9.55,12.31,12.31,0,0,0,4,9.55,16,16,0,0,0,20.35,0Z"/><path d="M246.45,25.6q6.15,6,6.15,17.8V74.2H237V45.8q0-6.4-2.8-9.55t-8.1-3.15a12.41,12.41,0,0,0-9.4,3.65q-3.51,3.64-3.5,10.85V74.2H197.6V0h15.6V26a20.59,20.59,0,0,1,7.5-4.75,27.11,27.11,0,0,1,9.6-1.65Q240.29,19.6,246.45,25.6Z"/></g></g></svg>
+    </div>
+
+        <h1>La plateforme créative qui réunit artistes et entreprises</h1>
+        </div>
+    </section>
+
+    <section id="second-section" class="section-home">
+        <div id="second-section-content">
+            <p>Avec Lugh, trouvez le projet artistique qui correspond à votre entreprise pour véhiculer et mettre en avant vos valeurs.
+                <br>
+                <br>
+
+                Déposez un appel à projet en ligne et sélectionnez la meilleure proposition pour vos locaux. Bénéficiez ainsi d’une oeuvre qui vous ressemble et vecteur de communication.</p>
+        </div>
+    </section>
+    <section id="third-section" class="section-home">
+        <div id="third-section-content">
+            <p>Lugh permet aux artistes de mettre en lumière leur talent.</p>
+        </div>
+    </section>
+    <section id="fourth-section" class="section-home">
+        <div id="fourth-section-content">
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="https://lugh-france.us18.list-manage.com/subscribe/post?u=5409c1dcec9fe953676d330f0&amp;id=0d34c28f96" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Pour rester informé, <br>inscrivez-vous à la newsletter</h2>
+                        <div class="mc-field-group">
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Votre adresse email">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5409c1dcec9fe953676d330f0_0d34c28f96" tabindex="-1" value=""></div>
+                        <div  id="clear" class="clear"><input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+    </section>
 {% endblock %}
 
 

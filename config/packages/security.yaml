@@ -9,8 +9,7 @@ security:
         user_db_provider:
             entity:
                 class: App\Entity\Artiste
-                property: email
-                class: App\Entity\Entreprise
+                      App\Entity\Entreprise
                 property: email
     firewalls:
         main:

@@ -7,8 +7,7 @@
             <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
 
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
-            <script src="assets/js/jquery.js"></script>
-            <script src="assets/js/app.js"></script>
+
         {% endblock %}
     </head>
     <body>
@@ -19,5 +18,38 @@
 
 
 
+    {% block javascripts %}
+        <script src="{{ asset('assets/js/jquery.js') }}"></script>
+        <script src="{{ asset('assets/js/midnight.jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script>
+       /* $('.btn-menu').mouseover(function(){
+            document.getElementById('fullscreen').classList.add('fullscreen-hover');
+        })
+        $('.btn-menu').mouseout(function(){
+            document.getElementById('fullscreen').classList.remove('fullscreen-hover');
+        })*/
+       $(document).ready(function(){
+           // Change this to the correct selector.
+           $('nav.sidebar').midnight();
+       });
+
+       $('.btn-menu').mouseover(function(){
+          document.getElementById('fullscreen').classList.add('fullscreen-hover')
+
+       })
+       $('.btn-menu').mouseout(function(){
+           document.getElementById('fullscreen').classList.remove('fullscreen-hover')
+
+       })
+        var type = document.getElementsByName('interest');
+       if (type.value = 'coding'){
+           document.getElementById('form-co').classList.add('none')
+       }
+
+
+    </script>
+
+    {% endblock %}
     </body>
 </html>

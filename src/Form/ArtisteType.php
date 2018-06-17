@@ -22,8 +22,7 @@ class ArtisteType extends AbstractType
                 'type' => PasswordType::class,
                 'first_options' => array('label' => 'Password'),
                 'second_options' => array('label' => 'Repeat Password'),
-            ))
-            ->add('adresse', TextType::class);
+            ));
     }
 
     public function configureOptions(OptionsResolver $resolver)

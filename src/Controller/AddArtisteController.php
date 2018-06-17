@@ -11,13 +11,5 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AddArtisteController extends Controller
 {
-    /**
-     * @Route("/add-artiste", name="add-artiste")
-     * @param Request $request
-     * @param UserPasswordEncoderInterface $passwordEncoder
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     */
-
-
 
 }

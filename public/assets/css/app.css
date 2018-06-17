@@ -7,10 +7,11 @@
     position: fixed;
     width: 6.25vw;
     z-index: 11;
-    height: 100%;
+    /* height: 100%; */
     right: 0;
     top: 0;
-    padding-top: 12.345679012345679vh;
+    padding-top: 8vh;
+    height: 80vh;
 }
 
 .sidebar nav ul {
@@ -23,7 +24,7 @@
     display: block;
     list-style: none;
     padding: 0;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }
 
 .sidebar nav ul li a {
@@ -100,6 +101,11 @@
     color: #000;
     text-decoration:  none;
 }
+.midnightHeader.default {
+    background: none;
+    color: black;
+}
+.midnightHeader.white.sidebar {background-color: #fff;}
 .red{
     color:red;
     background-color: orange;
@@ -145,6 +151,25 @@
 .sidebar .fullscreenTrigger:hover {
     opacity: .3
 }
+
+.fullscreen{
+    height: 100vh;
+    width: 0;
+    opacity: 1;
+    background-color: #fff;
+    transition-duration: 0.5s;
+    position:  fixed;
+}
+.fullscreen-hover{
+    opacity: 1;
+    width: 100vw;
+    background-color: #fff;
+    height: 100vh;
+    position: fixed;
+    transition-duration: 0.5s
+}
+
+
 h1{
     margin: auto;
     width: 50%;
@@ -200,6 +225,18 @@ h1{
     background-color: #679BD7 ;
     color: #ffff
 }
+#monkey{
+    width: 3%;
+    display: block;
+    margin: auto;
+    position: relative;
+    /* margin-top: 15vh; */
+    top: 25vh;
+}
+#monkey::before{
+    animation: float 1s ease-in-out infinite alternate;
+}
+
 
 /* FORM MAIL */
 
@@ -235,8 +272,92 @@ h1{
     right: 3%;
     top: -225%;
     border:  none;
-    background-color:  #679BD7;
+    /* background-color:  #679BD7; */
+    background-color: transparent;
+    background-image: url("../img/mail.svg");
     width: 2vw;
     height: 2vw;
     cursor: pointer;
+    background-size: 100%;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #679BD7;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    font-weight: 700;
+    padding: 1%;
+    color: #fff;
+    justify-content: space-around;
+    width: 25%;
+}
+
+/* PAGE LOG / Connection */
+#background-log{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+#section-log{
+    width: 50vw;
+    height: 40vh;
+    margin: auto;
+    display: flex;
+}
+#connection, #inscription{
+    width: 50%;
+
+
+}
+label{
+    display: block;
+}
+#connection form, #inscription form{
+    width: 70%;
+    margin: auto;
+}
+#connection input{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    padding: 3%;
+}
+#inscription input{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    padding: 3%;
+}
+#connection label{
+    margin-bottom: 2%;
+}
+#inscription label{
+    margin-bottom: 2%;
+}
+.form-group{
+    margin-top: 6%;
+}
+form h3{
+    text-align: center;
+    font-size: 1.3vw;
+}
+.btn-primary{
+    background-color: #679BD7 ;
+    color: #fff;
+    border: none;
+    padding: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+}
+.none{
+    display: none;
 }

@@ -27,5 +27,8 @@ $(function() {
         $('html,body').scrollTop(divs.eq(div).offset().top);
         console.log(div)
     });
-
 });
+
+
+
+

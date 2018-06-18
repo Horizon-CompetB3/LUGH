@@ -31,9 +31,10 @@
     display: block;
     text-decoration: none;
     margin: 0 auto;
-    padding: 15px 13px;
+    padding: 10px 13px;
     position: relative;
-    color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1vw;
     text-transform:  uppercase;
 }
 
@@ -54,10 +55,14 @@
 .sidebar nav ul li a:after {
     content: attr(data-text);
     position: absolute;
-    right: -8px;
+    right: 0;
     top: 0;
-    color: #000;
-    font-size: 96px;
+    color: white;
+    background-color: #242121;
+    display: block;
+    height: 100vh;
+    width: 20%;
+    font-size: 50px;
     line-height: 10vh;
     font-weight:  700;
     text-transform: uppercase;
@@ -98,12 +103,12 @@
 }
 
 .sidebar nav ul li.active a {
-    color: #000;
+    color: white;
     text-decoration:  none;
 }
 .midnightHeader.default {
     background: none;
-    color: black;
+    color: white;
 }
 .midnightHeader.white.sidebar {background-color: #fff;}
 .red{
@@ -139,7 +144,7 @@
     transform: rotate(180deg)
 }
 
-.sidebar .fullscreenTrigger {
+/*.sidebar .fullscreenTrigger {
     bottom: 24.938271604938272vh;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -150,25 +155,28 @@
 
 .sidebar .fullscreenTrigger:hover {
     opacity: .3
-}
+}*/
 
-.fullscreen{
+/*.fullscreen{
     height: 100vh;
-    width: 0;
+    width: 20%;
     opacity: 1;
-    background-color: #fff;
+    background-color: red;
     transition-duration: 0.5s;
-    position:  fixed;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
-.fullscreen-hover{
+.sidebar nav ul li a:hover .fullscreen{
     opacity: 1;
-    width: 100vw;
-    background-color: #fff;
+    width: 20%;
+    background-color: #242121;
     height: 100vh;
-    position: fixed;
-    transition-duration: 0.5s
-}
-
+    transition-duration: 0.5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+}*/
 
 h1{
     margin: auto;
@@ -221,6 +229,8 @@ h1{
     background-color: #242121 ;
     color: #ffff
 }
+
+
 #fourth-section{
     background-color: #679BD7 ;
     color: #ffff
@@ -231,11 +241,21 @@ h1{
     margin: auto;
     position: relative;
     /* margin-top: 15vh; */
-    top: 25vh;
+    top: 23vh;
+    animation-name: animation-monkey;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
-#monkey::before{
+
+@keyframes animation-monkey {
+    0%   {top: 23vh;}
+    50%  {top: 26vh;}
+    100% {top: 23vh;}
+}
+
+/*#monkey::before{
     animation: float 1s ease-in-out infinite alternate;
-}
+}*/
 
 
 /* FORM MAIL */

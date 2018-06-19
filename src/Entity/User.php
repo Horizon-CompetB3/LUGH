@@ -31,17 +31,47 @@ class User implements UserInterface, \Serializable
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=55)
+     * @ORM\Column(type="boolean", length=1,  options={"default":false})
      */
-    private $type;
+    private $entreprise;
+    /**
+     * @ORM\Column(type="boolean", length=1, options={"default":true})
+     */
+    private $artiste;
+    /**
+     * @return mixed
+     */
+    public function getEntreprise()
+    {
+        return $this->entreprise;
+    }
+
+    /**
+     * @param mixed $entreprise
+     */
+    public function setEntreprise($entreprise)
+    {
+        $this->entreprise = $entreprise;
+    }
 
     /**
      * @return mixed
      */
-    public function getType()
+    public function getArtiste()
     {
-        return $this->type;
+        return $this->artiste;
     }
+
+    /**
+     * @param mixed $artiste
+     */
+    public function setArtiste($artiste)
+    {
+        $this->artiste = $artiste;
+    }
+
+
+
 
     public function getUsername()
     {
@@ -55,14 +85,6 @@ class User implements UserInterface, \Serializable
         $this->username = $username;
     }
 
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
 
     /**
      * @ORM\Column(type="string", unique=true, length=64)

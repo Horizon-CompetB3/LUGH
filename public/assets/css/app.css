@@ -3,6 +3,9 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+body{
+    position: relative;
+}
 .sidebar {
     position: fixed;
     width: 6.25vw;
@@ -10,7 +13,7 @@
     /* height: 100%; */
     right: 0;
     top: 0;
-    padding-top: 8vh;
+    padding-top: 4vh;
     height: 80vh;
 }
 
@@ -256,6 +259,7 @@ h1{
 ::placeholder{
     font-size: 1.2vw;
     color: #9B9B9B;
+    margin-left: 5%;
 }
 #mce-EMAIL[type=text]{
     font-size:30px;
@@ -285,7 +289,9 @@ footer{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #679BD7;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
 }
 footer ul{
     display: flex;
@@ -339,7 +345,7 @@ label{
 #inscription label{
     margin-bottom: 2%;
 }
-.form-group{
+.form-group-co{
     margin-top: 6%;
 }
 form h3{
@@ -360,4 +366,143 @@ form h3{
 }
 .none{
     display: none;
+}
+#form-co{
+    width: 20%;
+    margin: auto;
+
+}
+#form-ins{
+    width: 20%;
+    margin: auto;
+
+}
+.form-group-co input{
+    width: 94%;
+    padding:3%;
+    border-radius: 0.5vw;
+    border: none;
+}
+.form-group-co label{
+    margin-bottom: 5%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1vw;
+}
+#form-co h2{
+    font-size: 1.5vw;
+    margin-bottom: 20%;
+    text-align: center;
+    color: #fff;
+}
+#section-co{
+    display: flex;
+    height: 100vh;
+    background-color: #679BD7;
+}
+#section-ins{
+    display: flex;
+    height: 100vh;
+
+}
+.form-group-co button{
+    width: 100%;
+    padding: 2.5%;
+    border-radius: 0.5vw;
+    background-color: #fff;
+    color: #679BD7;
+    font-size: 1.1vw;
+    border: none;
+    margin-top: 20%;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: 500;
+}
+.form-group-co button:hover{
+    transition: 0.5s;
+    color: #3f3f3f;
+}
+.link-co{
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    margin-top: 5%;
+    display: block;
+    width: 50%;
+}
+.underline{
+    height: 0.3vh;
+    width: 0%;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 1%;
+    transition: 0.5s;
+}
+.link-co:hover .underline{
+    width: 50%;
+    transition: 0.5s;
+
+}
+input::placeholder{
+
+}
+
+#div-logo-co{
+    width: 10%;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+#section-co{
+    display: flex;
+    height: 100vh;}
+
+.form-group-ins input{
+    width: 94%;
+    padding:3%;
+    border-radius: 0.5vw;
+    border: 1px solid black;
+}
+.form-group-ins label{
+    margin-bottom: 3%;
+    margin-top: 3%;
+    font-weight: 500;
+    font-size: 1.1vw;
+}
+#form-ins h2{
+    font-size: 1.5vw;
+    margin-bottom: 20%;
+    text-align: center;
+}
+#check-box{
+    display: flex;
+margin-top: 5%}
+.div-check-box{
+    display: flex;
+    width: 50%;
+}
+.div-check-box input{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 15%;
+}
+.div-check-box label{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 0.75vw;
+    width:85%;
+}
+.form-group-ins button{
+    width: 100%;
+    padding: 2.5%;
+    border-radius: 0.5vw;
+    background-color: #679BD7;
+    color: #fff;
+    font-size: 1.1vw;
+    border: none;
+    margin-top: 20%;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: 500;
 }

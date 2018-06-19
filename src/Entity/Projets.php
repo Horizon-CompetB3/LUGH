@@ -40,9 +40,11 @@ class Projets
      */
     private $orientation;
     /**
-     * @ORM\Column(type="string", nullable=true)
-     * @Assert\NotBlank(message="Ajouter une image jpg")
-     * @Assert\File(mimeTypes={ "image/jpeg" })
+     * @Assert\File(
+     *     maxSize = "1024k",
+     *     mimeTypes = {"application/jpg", "application/x-jpg"},
+     *     mimeTypesMessage = "Please upload a valid jpg"
+     * )
      */
     private $image;
     /**

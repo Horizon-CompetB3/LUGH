@@ -11,12 +11,37 @@
         {% endblock %}
     </head>
     <body>
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul class="midnightHeader default"><li class="active">
+                    <a class="midnightHeader btn-menu" href="/" data-text="deposer un projet"><div>deposer un projet</div></a></li>
+                <li><a class="btn-menu" href="/" data-text="Voir les artistes"><div>Voir les artistes</div></a></li>
+                <li><a class="btn-menu" href="/login" data-text="Se connecter"><div>Se connecter</div></a></li>
+                <li><a class="btn-menu" href="/" data-text="Contact"><div>Contact</div></a></li></ul></nav>
 
+    </div>
 
             {% block layout_content %}
             {% endblock %}
 
+    <footer>
+        <ul>
+            <li>© Lugh</li>
+            <li>Presse</li>
+            <li>Livre Blanc</li>
 
+        </ul>
+
+        <ul>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Linkedin</li>
+            <li>Medium</li>
+
+
+        </ul>
+    </footer>
 
     {% block javascripts %}
         <script src="{{ asset('assets/js/jquery.js') }}"></script>

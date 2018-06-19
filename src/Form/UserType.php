@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class UserType extends AbstractType
@@ -26,11 +26,14 @@ class UserType extends AbstractType
                 'first_options' => array('label' => 'Password'),
                 'second_options' => array('label' => 'Repeat Password'),
             ))
-            ->add('type', ChoiceType::class, array(
-            'choices'  => array(
-                'Entreprise' => 'Entreprise',
-                'Artiste' => 'Artiste',
-        )))
+            ->add('entreprise', CheckboxType::class, array(
+                'label'    => 'Entreprise',
+                'required' => 'true'))
+            ->add('artiste', CheckboxType::class, array(
+                'label'    => 'Artiste',
+                'required' => 'true',
+
+        ))
             ->add('save', SubmitType::class, array(
                 'attr' => array('class' => 'save')));
     }

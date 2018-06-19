@@ -2,33 +2,46 @@
 
 namespace App\Form;
 
-use App\Entity\Artiste;
+use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class ArtisteType extends AbstractType
+class UserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class)
+
             ->add('email', EmailType::class)
+            ->add('username', TextType::class)
             ->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,
                 'first_options' => array('label' => 'Password'),
                 'second_options' => array('label' => 'Repeat Password'),
-            ));
+            ))
+            ->add('entreprise', CheckboxType::class, array(
+                'label'    => 'Entreprise',
+                'required' => 'true'))
+            ->add('artiste', CheckboxType::class, array(
+                'label'    => 'Artiste',
+                'required' => 'true',
+
+        ))
+            ->add('save', SubmitType::class, array(
+                'attr' => array('class' => 'save')));
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => Artiste::class,
+            'data_class' => User::class,
         ));
     }
 }

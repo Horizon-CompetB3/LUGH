@@ -8,9 +8,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ArtisteRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class Artiste implements UserInterface, \Serializable
+class User implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id()
@@ -20,15 +20,71 @@ class Artiste implements UserInterface, \Serializable
     private $id;
 
     /**
-     * @ORM\Column(type="string", unique=true, length=25)
+     * @ORM\Column(type="string", unique=true)
      */
-    private $name;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=55, unique=true)
      * @Assert\Email()
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="boolean", length=1,  options={"default":false})
+     */
+    private $entreprise;
+    /**
+     * @ORM\Column(type="boolean", length=1, options={"default":true})
+     */
+    private $artiste;
+    /**
+     * @return mixed
+     */
+    public function getEntreprise()
+    {
+        return $this->entreprise;
+    }
+
+    /**
+     * @param mixed $entreprise
+     */
+    public function setEntreprise($entreprise)
+    {
+        $this->entreprise = $entreprise;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getArtiste()
+    {
+        return $this->artiste;
+    }
+
+    /**
+     * @param mixed $artiste
+     */
+    public function setArtiste($artiste)
+    {
+        $this->artiste = $artiste;
+    }
+
+
+
+
+    public function getUsername()
+    {
+        return $this->username;
+    }
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
+
 
     /**
      * @ORM\Column(type="string", unique=true, length=64)
@@ -40,10 +96,6 @@ class Artiste implements UserInterface, \Serializable
     private $plainPassword;
 
     /**
-     * @ORM\Column(type="string", length=64, nullable=true)
-     */
-    private $adresse;
-    /**
      * @ORM\Column(type="boolean")
      */
     private $isAdmin = false;
@@ -53,20 +105,9 @@ class Artiste implements UserInterface, \Serializable
     private $isActive;
     private $resetPasswordToken = false;
 
-    /**
-     * @return mixed
-     */
-    public function getName()
+    public function getId()
     {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
+        return $this->id;
     }
 
     /**
@@ -117,26 +158,8 @@ class Artiste implements UserInterface, \Serializable
         $this->plainPassword = $plainPassword;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getAdresse()
-    {
-        return $this->adresse;
-    }
 
-    /**
-     * @param mixed $adresse
-     */
-    public function setAdresse($adresse)
-    {
-        $this->adresse = $adresse;
-    }
 
-    public function getId()
-    {
-        return $this->id;
-    }
     /**
      * @return (Role|string)[] The user roles
      */
@@ -172,7 +195,11 @@ class Artiste implements UserInterface, \Serializable
      */
     public function serialize()
     {
-        // TODO: Implement serialize() method.
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+        ));
     }
 
     /**
@@ -186,7 +213,11 @@ class Artiste implements UserInterface, \Serializable
      */
     public function unserialize($serialized)
     {
-        // TODO: Implement unserialize() method.
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            ) = unserialize($serialized);
     }
 
     /**
@@ -201,15 +232,6 @@ class Artiste implements UserInterface, \Serializable
         // TODO: Implement getSalt() method.
     }
 
-    /**
-     * Returns the username used to authenticate the user.
-     *
-     * @return string The username
-     */
-    public function getUsername()
-    {
-        // TODO: Implement getUsername() method.
-    }
 
     /**
      * Removes sensitive data from the user.

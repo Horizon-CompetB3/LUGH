@@ -27,9 +27,9 @@ class UserType extends AbstractType
                 'second_options' => array('label' => 'Repeat Password'),
             ))
             ->add('type', ChoiceType::class, array(
-        'choices'  => array(
-            'Entreprise' => 'Entreprise',
-            'Artiste' => 'Artiste',
+            'choices'  => array(
+                'Entreprise' => 'Entreprise',
+                'Artiste' => 'Artiste',
         )))
             ->add('save', SubmitType::class, array(
                 'attr' => array('class' => 'save')));

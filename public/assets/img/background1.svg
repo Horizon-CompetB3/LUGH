@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1833px" height="1523px" viewBox="0 0 1833 1523" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.8">
+        <g id="home" transform="translate(-87.000000, -1034.000000)">
+            <g id="ENTREPRISE" transform="translate(-812.000000, 1039.000000)">
+                <g id="Group">
+                    <path d="M1301.37758,19.3683421 C1133.48412,19.3683421 997.390135,155.438395 997.390135,323.302326 C997.333101,366.022798 1006.31663,408.271984 1023.75061,447.274614 L1579.16846,199.717404 C1530.33392,90.0140631 1421.47699,19.3413137 1301.37758,19.3683421 Z" id="Shape" fill="#242422" fill-rule="nonzero"></path>
+                    <rect id="Rectangle-path" fill="#242422" fill-rule="nonzero" transform="translate(1876.571354, 590.159611) rotate(-45.000000) translate(-1876.571354, -590.159611) " x="1811.24386" y="524.843602" width="130.654996" height="130.632018"></rect>
+                    <rect id="Rectangle-path" fill="#242422" fill-rule="nonzero" transform="translate(2130.000000, 1300.693517) rotate(-98.000000) translate(-2130.000000, -1300.693517) " x="2086.3761" y="1156.22702" width="87.247808" height="288.933"></rect>
+                    <polygon id="Shape" fill="#242422" fill-rule="nonzero" points="969.882251 1183.24182 899.279677 1221.84441 1061.10683 1517.61802 1152.71874 1517.41822 1134.3633 1483.86828 1827.23115 1104.90432 1788.62177 1034.32906 1095.73901 1413.27812"></polygon>
+                    <rect id="Rectangle-path" fill="#242422" fill-rule="nonzero" transform="translate(2856.326160, 1475.715536) rotate(-30.000000) translate(-2856.326160, -1475.715536) " x="2831.73894" y="901.369699" width="49.1744395" height="1148.69167"></rect>
+                    <ellipse id="Oval" stroke="#242422" stroke-width="14.36" cx="1124.79664" cy="665.228057" rx="84.1926009" ry="84.1777944"></ellipse>
+                    <ellipse id="Oval" stroke="#242422" stroke-width="11.06" cx="2435.36996" cy="65.5543886" rx="64.820852" ry="64.8094524"></ellipse>
+                    <path d="M2203.65404,325.537134 L2421.21368,239.124531" id="Shape" stroke="#242422" stroke-width="11.06"></path>
+                    <path d="M2330.31547,389.60165 L2799.70785,206.347337" id="Shape" stroke="#242422" stroke-width="11.06"></path>
+                    <path d="M2531.48363,391.091523 L3000.87601,207.837209" id="Shape" stroke="#242422" stroke-width="11.06"></path>
+                    <path d="M2415.25314,543.058515 L2884.64552,359.804201" id="Shape" stroke="#242422" stroke-width="11.06"></path>
+                    <path d="M2394.39126,748.660915 L3321.25493,389.60165" id="Shape" stroke="#242422" stroke-width="51"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

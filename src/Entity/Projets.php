@@ -40,6 +40,12 @@ class Projets
      */
     private $orientation;
     /**
+     * @ORM\Column(type="string", length=64)
+     */
+    private $theme;
+
+
+    /**
      * @Assert\File(
      *     maxSize = "1024k",
      *     mimeTypes = {"application/jpg", "application/x-jpg"},
@@ -104,6 +110,21 @@ class Projets
     public function setEntreprise($entreprise)
     {
         $this->entreprise = $entreprise;
+    }
+    /**
+     * @return mixed
+     */
+    public function getTheme()
+    {
+        return $this->theme;
+    }
+
+    /**
+     * @param mixed $theme
+     */
+    public function setTheme($theme)
+    {
+        $this->theme = $theme;
     }
 
     /**

@@ -1,15 +1,13 @@
 security:
     encoders:
-        App\Entity\Artiste:
+        App\Entity\User:
             algorithm: bcrypt
-        App\Entity\Entreprise:
-                    algorithm: bcrypt
+
 
     providers:
         user_db_provider:
             entity:
-                class: App\Entity\Artiste
-                      App\Entity\Entreprise
+                class: App\Entity\User
                 property: email
     firewalls:
         main:

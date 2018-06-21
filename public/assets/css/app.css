@@ -6,6 +6,14 @@
 body{
     position: relative;
 }
+.section{
+    height: 100vh;
+    display: flex;
+}
+.btn-menu{
+
+}
+
 .sidebar {
     position: fixed;
     width: 6.25vw;
@@ -145,6 +153,10 @@ body{
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg)
+}
+
+.menu-white{
+    color: red;
 }
 
 /*.sidebar .fullscreenTrigger {

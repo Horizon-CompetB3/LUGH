@@ -328,7 +328,9 @@ h1{
     cursor: pointer;
     background-size: 100%;
 }
-
+#rs{
+    width: 40%;
+}
 footer{
     width: 100%;
     display: flex;
@@ -579,7 +581,6 @@ margin-top: 5%}
     font-weight: 500;
 }
 .form-add-projets-2{
-display: none;
     margin: auto;
     width: 60%;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -601,6 +602,25 @@ display: none;
     width: 25%;
 }.second-content{
     width: 70%;
+}
+.first-content-2{
+    width: 45%;
+}.second-content-2{
+    width: 45%;
+}
+
+ .first-content-2 input{
+     width: 90%;
+ }
+.first-content-2 label{
+    margin-top: 10%;
+}
+.second-content-2 label{
+    margin-top: 10%;
+}
+
+.second-content-2 input{
+    width: 90%;
 }
 .form-group-addprojets{
     margin-bottom: 15%;

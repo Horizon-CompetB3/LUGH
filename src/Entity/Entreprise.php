@@ -34,26 +34,7 @@ class Entreprise implements UserInterface, \Serializable
      * @Assert\Length(max=96)
      */
     private $plainPassword;
-    /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $adresse;
-    /**
-     * @ORM\Column(type="string", length=150, nullable=true)
-     */
-    private $description;
-    /**
-     * @ORM\Column(type="string", length=15)
-     */
-    private $secteur;
-    /**
-     * @ORM\Column(type="string", length=15)
-     */
-    private $type;
-    /**
-     * @ORM\Column(type="string", length=150, nullable=true)
-     */
-    private $projets;
+
     /**
      * @ORM\Column(name="is_active", type="boolean", nullable=true)
      */

@@ -15,15 +15,16 @@
                 </svg>
             </a>
         </div>
-        <div class="form-add-projets-1 form-add-projets">
+        <div id="form-add-projets-1" class="form-add-projets-1 form-add-projets">
             <h2>Demandez l'oeuvre qui vous ressemble</h2>
             <h3>Décrivez votre oeuvre</h3>
-            <div class="flex-form">
+            <div id="flex-form-1" class="flex-form">
                 <div class="first-content">
                     <form name="projets" method="post" enctype="multipart/form-data">
                         <div class="form-group-addprojets">
                             <label for="projets_name" class="required">Name</label>
-                            <input type="text" id="projets_name" name="projets[name]" required="required" class="form-control"/>
+                            <input type="text" id="projets_name" name="projets[name]" required="required"
+                                   class="form-control"/>
                         </div>
                         <div class="form-group-addprojets">
                             <label for="projets_type" class="required">Type</label>
@@ -53,23 +54,51 @@
                 <div class="second-content">
                     <div class="form-group-addprojets-2">
                         <label for="projets_description" class="required">Description</label>
-                        <input type="text" id="projets_description" name="projets[description]" required="required" class="form-control"/>
-                        <button class="btn-suivant" onclick="suivant1()">Suivant</button>
+                        <input type="text" id="projets_description" name="projets[description]" required="required"
+                               class="form-control"/>
+                        <button class="btn-suivant" onclick="swapForm()">Suivant</button>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <div class="form-add-projets-2 form-add-projets">
+        <div id="form-add-projets-2" class="form-add-projets-2 form-add-projets none">
+            <h2>Demandez l'oeuvre qui vous ressemble</h2>
+            <h3>Décrivez votre oeuvre</h3>
+            <div id="flex-form-1" class="flex-form">
+                <div class="first-content-2">
+                    <div>
+                        <label for="projets_budget" class="required">Budget</label>
+                        <input type="number" id="projets_budget" name="projets[budget]" required="required"
+                               class="form-control"/>
+                    </div>
+                    <div>
+                        <label for="projets_largeur" class="required">Largeur</label>
+                        <input type="number" id="projets_largeur" name="projets[largeur]" required="required"
+                               class="form-control"/></div>
+                    <div>
+                        <label for="projets_image" class="required">Image(JPG)</label>
+                        <input type="file" id="projets_image" name="projets[image]" required="required"/></div>
+                </div>
+                <div class="second-content-2">
+                    <div>
+                        <label for="projets_hauteur" class="required">Hauteur</label>
+                        <input type="number" id="projets_hauteur" name="projets[hauteur]" required="required"
+                               class="form-control"/>
+                    </div>
+                    <div>
+                        <label for="projets_profondeur" class="required">Profondeur</label>
+                        <input type="number" id="projets_profondeur" name="projets[profondeur]" required="required"
+                               class="form-control"/></div>
 
-            {{ form_row(form.budget, { 'attr': {'class': 'form-control'} }) }}
-            {{ form_row(form.largeur, { 'attr': {'class': 'form-control'} }) }}
-            {{ form_row(form.hauteur, { 'attr': {'class': 'form-control'} }) }}
-            {{ form_row(form.profondeur, { 'attr': {'class': 'form-control'} }) }}
-            {{ form_row(form.image) }}
-            {{ form_end(form) }}
-
+                    <div>
+                        <button type="submit" id="projets_save" name="projets[save]">Create projets</button>
+                    </div>
+                    <input type="hidden" id="projets__token" name="projets[_token]"
+                           value="c1UMIYF-oqYkGPVQepBZ5bOPlZOT3HFvh6pGAiU2Mdc"/></form>
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}

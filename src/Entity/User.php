@@ -46,7 +46,28 @@ class User implements UserInterface, \Serializable
      * @Assert\Length(max=4096)
      */
     private $plainPassword;
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\NotBlank(message="Please, upload the product brochure as a jpg file.")
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
+     */
+    private $realisations;
 
+    /**
+     * @return mixed
+     */
+    public function getRealisations()
+    {
+        return $this->realisations;
+    }
+
+    /**
+     * @param mixed $realisations
+     */
+    public function setRealisations($realisations)
+    {
+        $this->realisations = $realisations;
+    }
     /**
      * @ORM\Column(type="boolean")
      */
@@ -55,7 +76,107 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(name="is_active", type="boolean", nullable=true)
      */
     private $isActive;
+
+    /**
+     * @return mixed
+     */
+    public function getAdresse()
+    {
+        return $this->adresse;
+    }
+
+    /**
+     * @param mixed $adresse
+     */
+    public function setAdresse($adresse)
+    {
+        $this->adresse = $adresse;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSecteur()
+    {
+        return $this->secteur;
+    }
+
+    /**
+     * @param mixed $secteur
+     */
+    public function setSecteur($secteur)
+    {
+        $this->secteur = $secteur;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProjets()
+    {
+        return $this->projets;
+    }
+
+    /**
+     * @param mixed $projets
+     */
+    public function setProjets($projets)
+    {
+        $this->projets = $projets;
+    }
     private $resetPasswordToken = false;
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $adresse;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $description;
+    /**
+     * @ORM\Column(type="string", length=15)
+     */
+    private $secteur;
+    /**
+     * @ORM\Column(type="string", length=15)
+     */
+    private $type;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $projets;
     /**
      * @return mixed
      */

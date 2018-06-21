@@ -17,6 +17,8 @@
         </div>
         <div id="form-ins">
             <h2>Inscription</h2>
+            <form name="user" method="post" {{ path(('add-user')) }}>
+                {{ form_row(form._token) }}
             <div class="form-group-ins">
                 <label for="user_username" class="required">Nom</label>
                 <input type="text" id="user_username" name="user[username]" required="required"/>
@@ -57,7 +59,6 @@
             <div class="form-group-ins">
                 <button type="submit" id="user_save" name="user[save]" class="save">S'INSCRIRE</button>
             </div>
-            <input type="hidden" id="user__token" name="user[_token]"/>
             </form>
         </div>
     </section>

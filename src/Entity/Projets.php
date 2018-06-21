@@ -24,11 +24,11 @@ class Projets
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=55, unique=true, nullable=true)
+     * @ORM\Column(type="string", length=55, nullable=true)
      */
     private $type;
     /**
-     * @ORM\Column(type="string", length=55, unique=true)
+     * @ORM\Column(type="string", length=55, nullable=true)
      */
     private $entreprise;
     /**
@@ -46,11 +46,9 @@ class Projets
 
 
     /**
-     * @Assert\File(
-     *     maxSize = "1024k",
-     *     mimeTypes = {"application/jpg", "application/x-jpg"},
-     *     mimeTypesMessage = "Please upload a valid jpg"
-     * )
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Please, upload the product brochure as a jpg file.")
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
      */
     private $image;
     /**

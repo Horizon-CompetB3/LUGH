@@ -44,7 +44,7 @@
 
         </ul>
 
-        <ul>
+        <ul id="rs">
             <li>Twitter</li>
             <li>Facebook</li>
             <li>Instagram</li>
@@ -62,26 +62,11 @@
         <script src="{{ asset('assets/js/jquery.fullpage.min.js') }}"></script>
 
     <script>
-        /*$('.btn-menu').mouseover(function(){
-            document.getElementById('fullscreen').classList.add('fullscreen-hover');
-        })
-        $('.btn-menu').mouseout(function(){
-            document.getElementById('fullscreen').classList.remove('fullscreen-hover');
-        })*/
-       /*$(document).ready(function(){
-           // Change this to the correct selector.
-           $('nav.sidebar').midnight();
-       });
 
-       $('.btn-menu').mouseover(function(){
-          document.getElementById('fullscreen').classList.add('fullscreen-hover')
-
-       })
-       $('.btn-menu').mouseout(function(){
-           document.getElementById('fullscreen').classList.remove('fullscreen-hover')
-
-       })*/
-
+        function swapForm() {
+            document.getElementById('form-add-projets-1').classList.add('none');
+            document.getElementById('form-add-projets-2').classList.remove('none');
+        }
     </script>
 
     {% endblock %}

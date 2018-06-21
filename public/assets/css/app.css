@@ -6,6 +6,7 @@
 body{
     position: relative;
 }
+
 .sidebar {
     position: fixed;
     width: 6.25vw;
@@ -64,7 +65,6 @@ body{
     background-color: #242121;
     display: block;
     height: 100vh;
-
     font-size: 30px;
     line-height: 10vh;
     font-weight:  700;
@@ -78,6 +78,30 @@ body{
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
+
+
+
+/* .midnightHeader.default .sidebar li > a {
+    color: red;
+} */
+
+/*.midnightHeader.white .sidebar nav ul li a:after {
+    color: white;
+    background-color: black;
+}
+
+.midnightHeader.black {
+    background-color:white;
+    color: black;
+}
+
+.midnightHeader.black .sidebar nav ul li a:after {
+    color: black;
+    background-color: white;
+}*/
+
+
+
 
 .sidebar nav ul li a:hover:after {
     -webkit-transform: translateX(0);
@@ -105,7 +129,7 @@ body{
     padding-bottom: 0
 }
 
-.sidebar nav ul li.active a {
+.sidebar nav ul li a {
     color: white;
     text-decoration:  none;
 }
@@ -124,7 +148,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    text-align: center
+    text-align: center;
 }
 
 .sidebar .langWrapper .close,
@@ -188,22 +212,24 @@ h1{
     margin-top: 2%;
     text-align: center;
 }
+
 #div-logo{
     width: 30%;
     margin: auto;
 }
+
 .section-home{
     height: 100vh;
     display: flex;
 }
+
 #first-section-content{
     margin-top: auto;
     margin-bottom: auto;
     width: 100%;
 }
+
 #second-section-content{
-    margin-top: auto;
-    margin-bottom: auto;
     width: 70%;
     margin: auto;
     font-size: 2.2vw;
@@ -219,39 +245,45 @@ h1{
 }
 
 #third-section-content{
-    margin-top: auto;
-    margin-bottom: auto;
     width: 70%;
     margin: auto;
     font-size: 2vw;
     text-align: center;
     font-weight: 700;
 }
+
 #fourth-section-content{
-    margin-top: auto;
-    margin-bottom: auto;
     width: 70%;
     margin: auto;
     font-size: 1vw;
     text-align: center;
     font-weight: 600;
 }
+
 #second-section{
-    background-color: #242121 ;
-    color: #ffff
+    opacity: 0;
+    transition: 0.5s;
 }
 
+#second-section:hover {
+    opacity: 1;
+    background-color: black;
+    background-image: url(../img/background1.svg);
+    color: #ffff;
+    background-size: contain;
+    transition: 0.5s;
+}
 
 #fourth-section{
-    background-color: #679BD7 ;
+    background-color: #679BD7;
     color: #ffff
 }
+
 #monkey{
     width: 3%;
     display: block;
     margin: auto;
     position: relative;
-    /* margin-top: 15vh; */
     top: 23vh;
     animation-name: animation-monkey;
     animation-duration: 4s;
@@ -277,21 +309,24 @@ h1{
     margin: auto;
     margin-top: 3%;
 }
+
 #mce-EMAIL{
     width: 80%;
     border: none;
     border-radius: 0.8vw;
     padding: 5%;
-    /* display:  block; */
 }
+
 ::placeholder{
     font-size: 1.2vw;
     color: #9B9B9B;
     margin-left: 5%;
 }
+
 #mce-EMAIL[type=text]{
     font-size:30px;
-    color: #9B9B9B;}
+    color: #9B9B9B;
+}
 
 #clear{
     position: relative;
@@ -299,6 +334,7 @@ h1{
     margin: auto;
     height: 30px;
 }
+
 #mc-embedded-subscribe{
     position: absolute;
     right: 3%;
@@ -321,6 +357,7 @@ footer{
     position: absolute;
     bottom: 0;
 }
+
 footer ul{
     display: flex;
     list-style: none;
@@ -337,49 +374,58 @@ footer ul{
     width: 100vw;
     height: 100vh;
 }
+
 #section-log{
     width: 50vw;
     height: 40vh;
     margin: auto;
     display: flex;
 }
+
 #connection, #inscription{
     width: 50%;
-
-
 }
+
 label{
     display: block;
 }
+
 #connection form, #inscription form{
     width: 70%;
     margin: auto;
 }
+
 #connection input{
     width: 100%;
     border: 1px solid black;
     border-radius: 0.5vw;
     padding: 3%;
 }
+
 #inscription input{
     width: 100%;
     border: 1px solid black;
     border-radius: 0.5vw;
     padding: 3%;
 }
+
 #connection label{
     margin-bottom: 2%;
 }
+
 #inscription label{
     margin-bottom: 2%;
 }
+
 .form-group-co{
     margin-top: 6%;
 }
+
 form h3{
     text-align: center;
     font-size: 1.3vw;
 }
+
 .btn-primary{
     background-color: #679BD7 ;
     color: #fff;
@@ -392,47 +438,53 @@ form h3{
     border-radius: 0.5vw;
     font-size: 1vw;
 }
+
 .none{
     display: none;
 }
+
 #form-co{
     width: 20%;
     margin: auto;
-
 }
+
 #form-ins{
     width: 20%;
     margin: auto;
-
 }
+
 .form-group-co input{
     width: 94%;
     padding:3%;
     border-radius: 0.5vw;
     border: none;
 }
+
 .form-group-co label{
     margin-bottom: 5%;
     color: #fff;
     font-weight: 500;
     font-size: 1.1vw;
 }
+
 #form-co h2{
     font-size: 1.5vw;
     margin-bottom: 20%;
     text-align: center;
     color: #fff;
 }
+
 #section-co{
     display: flex;
     height: 100vh;
     background-color: #679BD7;
 }
+
 #section-ins{
     display: flex;
     height: 100vh;
-
 }
+
 .form-group-co button{
     width: 100%;
     padding: 2.5%;
@@ -446,10 +498,12 @@ form h3{
     cursor: pointer;
     font-weight: 500;
 }
+
 .form-group-co button:hover{
     transition: 0.5s;
     color: #3f3f3f;
 }
+
 .link-co{
     text-decoration: none;
     text-align: center;
@@ -459,6 +513,7 @@ form h3{
     display: block;
     width: 50%;
 }
+
 .underline{
     height: 0.3vh;
     width: 0%;
@@ -467,6 +522,7 @@ form h3{
     margin-top: 1%;
     transition: 0.5s;
 }
+
 .link-co:hover .underline{
     width: 50%;
     transition: 0.5s;

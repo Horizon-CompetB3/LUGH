@@ -13,11 +13,13 @@
     <body>
     <div class="sidebar" id="sidebar">
         <nav>
-            <ul class="midnightHeader default"><li class="active">
-                    <a class="midnightHeader btn-menu" href="/" data-text="deposer un projet"><div>deposer un projet</div></a></li>
+            <ul class="midnightHeader">
+                <li><a class="midnightHeader btn-menu" href="/" data-text="deposer un projet"><div>deposer un projet</div></a></li>
                 <li><a class="btn-menu" href="/" data-text="Voir les artistes"><div>Voir les artistes</div></a></li>
                 <li><a class="btn-menu" href="/login" data-text="Se connecter"><div>Se connecter</div></a></li>
-                <li><a class="btn-menu" href="/" data-text="Contact"><div>Contact</div></a></li></ul></nav>
+                <li><a class="btn-menu" href="/" data-text="Contact"><div>Contact</div></a></li>
+            </ul>
+        </nav>
 
     </div>
 
@@ -46,14 +48,17 @@
     {% block javascripts %}
         <script src="{{ asset('assets/js/jquery.js') }}"></script>
         <script src="{{ asset('assets/js/midnight.jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/js/midnight.jquery.js') }}"></script>
+        <script src="{{ asset('assets/js/midnight.js') }}"></script>
         <script src="{{ asset('assets/js/app.js') }}"></script>
+
     <script>
         /*$('.btn-menu').mouseover(function(){
             document.getElementById('fullscreen').classList.add('fullscreen-hover');
         })
         $('.btn-menu').mouseout(function(){
             document.getElementById('fullscreen').classList.remove('fullscreen-hover');
-        })*/
+        })
        $(document).ready(function(){
            // Change this to the correct selector.
            $('nav.sidebar').midnight();
@@ -66,7 +71,44 @@
        $('.btn-menu').mouseout(function(){
            document.getElementById('fullscreen').classList.remove('fullscreen-hover')
 
-       })
+       }) */
+
+
+        $(document).ready(function(){
+            // Change this to the correct selector.
+            $('nav#mon-element-fixed').midnight();
+        });
+
+
+
+
+
+
+        $(document).ready(function(){
+            $("#first-section").hover(function(){
+                $(".sidebar nav ul li a").css("color", "black");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#second-section").hover(function(){
+                $(".sidebar nav ul li a").css("color", "white");
+            });
+        });
+
+
+        $(document).ready(function(){
+            $("#third-section").hover(function(){
+                $(".sidebar nav ul li a").css("color", "black");
+            });
+        });
+
+        $(document).ready(function(){
+            $("#fourth-section").hover(function(){
+                $(".sidebar nav ul li a").css("color", "white");
+            });
+        });
+
 
     </script>
 

@@ -1,4 +1,4 @@
-$(function() {
+/*$(function() {
 
     var divs = $('.section-home');
     var div = 0;
@@ -28,6 +28,12 @@ $(function() {
         console.log(div)
     });
 });
+*/
+
+
+
+
+
 
 
 

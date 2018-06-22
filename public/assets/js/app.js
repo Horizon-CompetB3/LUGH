@@ -1,4 +1,4 @@
-/*$(function() {
+$(function() {
 
     var divs = $('.section-home');
     var div = 0;
@@ -27,10 +27,10 @@
         $('html,body').scrollTop(divs.eq(div).offset().top);
         console.log(div)
     });
+
+$(document).ready(function() {
+    $('#fullpage').fullpage();
 });
-*/
-
-
 
 
 

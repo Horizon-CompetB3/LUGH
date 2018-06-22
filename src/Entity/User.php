@@ -20,7 +20,7 @@ class User implements UserInterface, \Serializable
     private $id;
 
     /**
-     * @ORM\Column(type="string", unique=true)
+     * @ORM\Column(type="string", unique=true, length=70)
      */
     private $username;
 
@@ -38,6 +38,24 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="boolean", length=1, options={"default":true})
      */
     private $artiste;
+    /**
+     * @ORM\Column(type="string", unique=true, length=64)
+     */
+    private $password;
+    /**
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isAdmin = false;
+    /**
+     * @ORM\Column(name="is_active", type="boolean", nullable=true)
+     */
+    private $isActive;
+    private $resetPasswordToken = false;
     /**
      * @return mixed
      */
@@ -86,24 +104,7 @@ class User implements UserInterface, \Serializable
     }
 
 
-    /**
-     * @ORM\Column(type="string", unique=true, length=64)
-     */
-    private $password;
-    /**
-     * @Assert\Length(max=4096)
-     */
-    private $plainPassword;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $isAdmin = false;
-    /**
-     * @ORM\Column(name="is_active", type="boolean", nullable=true)
-     */
-    private $isActive;
-    private $resetPasswordToken = false;
 
     public function getId()
     {

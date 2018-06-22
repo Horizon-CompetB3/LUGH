@@ -12,5 +12,6 @@
     },
     "dependencies": {
         "scrollreveal": "^3.4.0"
+        "fullpage.js": "^2.9.7"
     }
 }

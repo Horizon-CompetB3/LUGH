@@ -7,6 +7,11 @@ body{
     position: relative;
 }
 
+.section{
+    height: 100vh;
+    display: flex;
+}
+
 .sidebar {
     position: fixed;
     width: 6.25vw;
@@ -171,10 +176,6 @@ body{
 .nav-connexion:hover + #div-connexion {
     right: 0;
     transition: 0.7s;
-
-}
-
-
 
 #div-contact {
     background-color: black;

@@ -13,75 +13,56 @@
     <body>
     <div class="sidebar" id="sidebar">
         <nav>
-            <ul class="midnightHeader">
-                <li><a class="midnightHeader btn-menu" href="/" data-text="deposer un projet"><div>deposer un projet</div></a></li>
-                <li><a class="btn-menu" href="/" data-text="Voir les artistes"><div>Voir les artistes</div></a></li>
-                <li><a class="btn-menu" href="/login" data-text="Se connecter"><div>Se connecter</div></a></li>
-                <li><a class="btn-menu" href="/" data-text="Contact"><div>Contact</div></a></li>
+            <ul>
+                <li><a class="btn-menu nav-projet" href="/" data-text="deposer un projet">deposer un projet</a>
+                    <div id="div-projet">deposer un projet</div>
+                </li>
+                <li><a class="btn-menu nav-voir" href="/" data-text="Voir les artistes">Voir les artistes</a>
+                    <div id="div-voir">Voir les artistes</div>
+                </li>
+                <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</a>
+                    <div id="div-connexion">Se connecter</div>
+                </li>
+                <li><a class="btn-menu nav-contact" href="/" data-text="Contact">Contact</a>
+                    <div id="div-contact">Contact</div>
+                </li>
             </ul>
         </nav>
-
     </div>
 
-            {% block layout_content %}
+    <div class="all-content">
+    {% block layout_content %}
             {% endblock %}
+    </div>
 
     <footer>
-        <ul>
-            <li>© Lugh</li>
-            <li>Presse</li>
-            <li>Livre Blanc</li>
-
-        </ul>
-
-        <ul>
-            <li>Twitter</li>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Linkedin</li>
-            <li>Medium</li>
-
-
-        </ul>
+        <div id="copyright">
+            <ul>
+                <li>© Lugh</li>
+                <li>Presse</li>
+                <li>Livre Blanc</li>
+            </ul>
+        </div>
+        <div id="rs">
+            <ul>
+                <li><a target="_blank" href="https://twitter.com/Hello_lugh">twitter</a></li>
+                <li><a target="_blank" href="https://www.facebook.com/Lugh-art-sur-commande-en-entreprise-567883830278473/">facebook</a></li>
+                <li><a target="_blank" href="https://www.instagram.com/lugh_france/">instagram</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/lugh-entreprise/">linkedin</a></li>
+                <li><a target="_blank" href="https://medium.com/@lugh.entreprise">medium</a></li>
+            </ul>
+        </div>
     </footer>
+
+
 
     {% block javascripts %}
         <script src="{{ asset('assets/js/jquery.js') }}"></script>
-        <script src="{{ asset('assets/js/midnight.jquery.min.js') }}"></script>
-        <script src="{{ asset('assets/js/midnight.jquery.js') }}"></script>
-        <script src="{{ asset('assets/js/midnight.js') }}"></script>
+        <script src="{{ asset('assets/js/scrollreveal.js') }}"></script>
         <script src="{{ asset('assets/js/app.js') }}"></script>
 
-    <script>
-        /*$('.btn-menu').mouseover(function(){
-            document.getElementById('fullscreen').classList.add('fullscreen-hover');
-        })
-        $('.btn-menu').mouseout(function(){
-            document.getElementById('fullscreen').classList.remove('fullscreen-hover');
-        })
-       $(document).ready(function(){
-           // Change this to the correct selector.
-           $('nav.sidebar').midnight();
-       });
 
-       $('.btn-menu').mouseover(function(){
-          document.getElementById('fullscreen').classList.add('fullscreen-hover')
-
-       })
-       $('.btn-menu').mouseout(function(){
-           document.getElementById('fullscreen').classList.remove('fullscreen-hover')
-
-       }) */
-
-
-        $(document).ready(function(){
-            // Change this to the correct selector.
-            $('nav#mon-element-fixed').midnight();
-        });
-
-
-
-
+        <script>
 
 
         $(document).ready(function(){
@@ -110,7 +91,29 @@
         });
 
 
-    </script>
+        window.sr = ScrollReveal({ reset: true });
+        sr.reveal('#second-section');
+        sr.reveal('#third-section');
+        sr.reveal('#fourth-section');
+
+
+
+        $(".sidebar").hover(function() {
+            $(".all-content").addClass("nav-active");
+        });
+
+
+        $(document).ready(function() {
+            $('.sidebar').hover(function(){
+                    $('.all-content').addClass('nav-active');
+                },
+                function(){
+                    $('.all-content').removeClass('nav-active');
+                });
+        });
+
+
+        </script>
 
     {% endblock %}
     </body>

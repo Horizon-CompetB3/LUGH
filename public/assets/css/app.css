@@ -10,7 +10,7 @@ body{
 .sidebar {
     position: fixed;
     width: 6.25vw;
-    z-index: 11;
+    z-index: 300;
     /* height: 100%; */
     right: 0;
     top: 0;
@@ -35,16 +35,12 @@ body{
     display: block;
     text-decoration: none;
     margin: 0 auto;
-    padding: 10px 13px;
+    padding: 10px 20px;
+    width: 40px;
     position: relative;
     color: white;
     font-size: 1vw;
     text-transform:  uppercase;
-}
-
-.sidebar nav ul li a div {
-    margin: auto;
-    /* width: 60%; */
     writing-mode: vertical-lr;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -56,7 +52,9 @@ body{
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
 
-.sidebar nav ul li a:after {
+
+/*
+.sidebar nav ul li a::after {
     content: attr(data-text);
     position: absolute;
     right: 0;
@@ -80,29 +78,6 @@ body{
 }
 
 
-
-/* .midnightHeader.default .sidebar li > a {
-    color: red;
-} */
-
-/*.midnightHeader.white .sidebar nav ul li a:after {
-    color: white;
-    background-color: black;
-}
-
-.midnightHeader.black {
-    background-color:white;
-    color: black;
-}
-
-.midnightHeader.black .sidebar nav ul li a:after {
-    color: black;
-    background-color: white;
-}*/
-
-
-
-
 .sidebar nav ul li a:hover:after {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -119,7 +94,125 @@ body{
     -o-transform: translateX(3.125vw) rotate(180deg);
     transform: translateX(3.125vw) rotate(180deg);
     width: 50%;
+}*/
+
+#div-projet {
+    background-color: black;
+    color: white;
+    padding-left: 50%;
+    width: 260px;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight:  700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    display: block;
+    z-index: 201;
+    transition: 0.7s;
 }
+
+.nav-projet:hover + #div-projet {
+    right: 0;
+    transition: 0.7s;
+
+}
+
+
+
+#div-voir {
+    background-color: black;
+    color: white;
+    padding-top: 260%;
+    padding-left: 50%;
+    width: 260px;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight:  700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    display: block;
+    z-index: 201;
+    transition: 0.7s;
+}
+
+.nav-voir:hover + #div-voir {
+    right: 0;
+    transition: 0.7s;
+}
+
+
+
+
+#div-connexion {
+    background-color: black;
+    color: white;
+    padding-top: 480%;
+    padding-left: 50%;
+    width: 260px;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight:  700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    display: block;
+    z-index: 201;
+    transition: 0.7s;
+}
+
+.nav-connexion:hover + #div-connexion {
+    right: 0;
+    transition: 0.7s;
+
+}
+
+
+
+#div-contact {
+    background-color: black;
+    color: white;
+    padding-top: 650%;
+    padding-left: 50%;
+    width: 260px;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight:  700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    display: block;
+    z-index: 201;
+    transition: 0.7s;
+}
+
+.nav-contact:hover + #div-contact {
+    right: 0;
+    transition: 0.7s;
+
+}
+
+.all-content {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.nav-active {
+    width: 90%;
+    transition: 0.5s;
+    transition-delay: 0.9s;
+}
+
+
 
 .sidebar nav ul li:first-child a {
     padding-top: 0
@@ -129,81 +222,6 @@ body{
     padding-bottom: 0
 }
 
-.sidebar nav ul li a {
-    color: white;
-    text-decoration:  none;
-}
-.midnightHeader.default {
-    background: none;
-    color: white;
-}
-.midnightHeader.white.sidebar {background-color: #fff;}
-.red{
-    color:red;
-    background-color: orange;
-}
-.sidebar .langWrapper,
-.sidebar .fullscreenTrigger {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: center;
-}
-
-.sidebar .langWrapper .close,
-.sidebar .fullscreenTrigger .close {
-    display: none
-}
-
-.sidebar .langWrapper {
-    bottom: 12.345679012345679vh
-}
-
-.sidebar .langWrapper a {
-    display: block;
-    margin: 0 auto;
-    writing-mode: vertical-lr;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg)
-}
-
-/*.sidebar .fullscreenTrigger {
-    bottom: 24.938271604938272vh;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s
-}
-
-.sidebar .fullscreenTrigger:hover {
-    opacity: .3
-}*/
-
-/*.fullscreen{
-    height: 100vh;
-    width: 20%;
-    opacity: 1;
-    background-color: red;
-    transition-duration: 0.5s;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.sidebar nav ul li a:hover .fullscreen{
-    opacity: 1;
-    width: 20%;
-    background-color: #242121;
-    height: 100vh;
-    transition-duration: 0.5s;
-    position: absolute;
-    left: 0;
-    top: 0;
-}*/
 
 h1{
     margin: auto;
@@ -235,13 +253,6 @@ h1{
     font-size: 2.2vw;
     text-align: center;
     font-weight: 700;
-    opacity: 0;
-    transition: 0.5s;
-}
-
-#second-section:hover #second-section-content {
-    opacity: 1;
-    transition: 0.5s;
 }
 
 #third-section-content{
@@ -260,23 +271,19 @@ h1{
     font-weight: 600;
 }
 
-#second-section{
-    opacity: 0;
-    transition: 0.5s;
-}
 
-#second-section:hover {
-    opacity: 1;
+#second-section {
     background-color: black;
     background-image: url(../img/background1.svg);
     color: #ffff;
     background-size: contain;
-    transition: 0.5s;
 }
 
 #fourth-section{
     background-color: #679BD7;
-    color: #ffff
+    background-image: url(../img/background2.svg);
+    color: #ffff;
+    background-size: contain;
 }
 
 #monkey{
@@ -338,7 +345,7 @@ h1{
 #mc-embedded-subscribe{
     position: absolute;
     right: 3%;
-    top: -225%;
+    top: -157%;
     border:  none;
     /* background-color:  #679BD7; */
     background-color: transparent;
@@ -349,8 +356,23 @@ h1{
     background-size: 100%;
 }
 
+#copyright {
+    width: 40%;
+}
+
+#rs {
+    width: 60%;
+    margin-left: 30%;
+}
+
+#rs a{
+    text-decoration: underline;
+    color: white;
+    padding: 8%;
+}
+
 footer{
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     background-color: transparent;
@@ -365,7 +387,6 @@ footer ul{
     padding: 1%;
     color: #fff;
     justify-content: space-around;
-    width: 25%;
 }
 
 /* PAGE LOG / Connection */

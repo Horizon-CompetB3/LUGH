@@ -2,7 +2,9 @@
 {% block layout_content %}
 <div class="card border-dark mb-3">
     <h1>Votre profil</h1>
-    <div class="card-title">{{ app.artiste.name }}</div>
-    <p class="card-text">{{ app.artiste.email }}</p>
+    <div class="card-title">{{ app.user.username }}</div>
+    <p class="card-text">{{ app.user.email }}</p>
+
+    {% if is_granted('ROLE_USER') == true and app.user.art_ent = 2 %}
 </div>
 {% endblock %}

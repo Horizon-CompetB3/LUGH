@@ -15,9 +15,17 @@ class ProfilController extends Controller
      */
     public function profile()
     {
+
+
+
         return $this->render('Content/profil.html.twig', [
             'controller_name' => 'ProfilController',
         ]);
+    }
+
+    public function completprofil()
+    {
+
     }
 
 

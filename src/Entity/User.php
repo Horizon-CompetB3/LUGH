@@ -29,15 +29,27 @@ class User implements UserInterface, \Serializable
      * @Assert\Email()
      */
     private $email;
+    /**
+     * @ORM\Column(type="string", length=64)
+     */
+    private $art_ent;
 
     /**
-     * @ORM\Column(type="boolean", length=1,  options={"default":false})
+     * @return mixed
      */
-    private $entreprise;
+    public function getArtEnt()
+    {
+        return $this->art_ent;
+    }
+
     /**
-     * @ORM\Column(type="boolean", length=1, options={"default":true})
+     * @param mixed $art_ent
      */
-    private $artiste;
+    public function setArtEnt($art_ent)
+    {
+        $this->art_ent = $art_ent;
+    }
+
     /**
      * @ORM\Column(type="string", unique=true, length=64)
      */
@@ -48,7 +60,6 @@ class User implements UserInterface, \Serializable
     private $plainPassword;
     /**
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\NotBlank(message="Please, upload the product brochure as a jpg file.")
      * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
      */
     private $realisations;
@@ -158,7 +169,7 @@ class User implements UserInterface, \Serializable
     }
     private $resetPasswordToken = false;
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $adresse;
     /**
@@ -166,48 +177,18 @@ class User implements UserInterface, \Serializable
      */
     private $description;
     /**
-     * @ORM\Column(type="string", length=15)
+     * @ORM\Column(type="string", length=15, nullable=true)
      */
     private $secteur;
     /**
-     * @ORM\Column(type="string", length=15)
+     * @ORM\Column(type="string", length=15, nullable=true)
      */
     private $type;
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
     private $projets;
-    /**
-     * @return mixed
-     */
-    public function getEntreprise()
-    {
-        return $this->entreprise;
-    }
 
-    /**
-     * @param mixed $entreprise
-     */
-    public function setEntreprise($entreprise)
-    {
-        $this->entreprise = $entreprise;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getArtiste()
-    {
-        return $this->artiste;
-    }
-
-    /**
-     * @param mixed $artiste
-     */
-    public function setArtiste($artiste)
-    {
-        $this->artiste = $artiste;
-    }
 
 
 

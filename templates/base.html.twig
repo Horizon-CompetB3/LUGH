@@ -28,9 +28,19 @@
             <ul class="midnightHeader default"><li class="active">
                     <a class="midnightHeader btn-menu" href="/" data-text="deposer un projet"><div>deposer un projet</div></a></li>
                 <li><a class="btn-menu" href="/" data-text="Voir les artistes"><div>Voir les artistes</div></a></li>
+                {% if is_granted('ROLE_USER') == false  %}
                 <li><a class="btn-menu" href="/login" data-text="Se connecter"><div>Se connecter</div></a></li>
-                <li><a class="btn-menu" href="/" data-text="Contact"><div>Contact</div></a></li></ul></nav>
+                {% endif %}
+                {% if is_granted('ROLE_USER') == true  %}
+                <li><a class="btn-menu" href="/logout" data-text="Se connecter"><div>Se Déconnecter</div></a></li>
+                {% endif %}
+                <li><a class="btn-menu" href="/" data-text="Contact"><div>Contact</div></a></li></ul>
 
+
+
+
+
+        </nav>
     </div>
 
             {% block layout_content %}
@@ -63,10 +73,7 @@
 
     <script>
 
-        function swapForm() {
-            document.getElementById('form-add-projets-1').classList.add('none');
-            document.getElementById('form-add-projets-2').classList.remove('none');
-        }
+
     </script>
 
     {% endblock %}

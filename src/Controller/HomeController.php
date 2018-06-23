@@ -13,7 +13,7 @@ class HomeController extends Controller
      * @Route("/", name="home")
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function homePost()
+    public function index()
     {
 
 

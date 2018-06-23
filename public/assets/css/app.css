@@ -663,3 +663,19 @@ margin-top: 5%}
     background: none;
     border: none;
 }
+#check-box{
+    display: flex;
+    justify-content: space-between;
+}
+#check-box input, #check-box label{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#check-box input{
+    width: auto;
+    margin-right: 20%;
+}
+.div-check{
+    display: flex;
+    width: 40%;
+}

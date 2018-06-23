@@ -25,20 +25,6 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="sidebar" id="sidebar">
         <nav>
-            <ul class="midnightHeader default"><li class="active">
-                    <a class="midnightHeader btn-menu" href="/" data-text="deposer un projet"><div>deposer un projet</div></a></li>
-                <li><a class="btn-menu" href="/" data-text="Voir les artistes"><div>Voir les artistes</div></a></li>
-                {% if is_granted('ROLE_USER') == false  %}
-                <li><a class="btn-menu" href="/login" data-text="Se connecter"><div>Se connecter</div></a></li>
-                {% endif %}
-                {% if is_granted('ROLE_USER') == true  %}
-                <li><a class="btn-menu" href="/logout" data-text="Se connecter"><div>Se Déconnecter</div></a></li>
-                {% endif %}
-                <li><a class="btn-menu" href="/" data-text="Contact"><div>Contact</div></a></li></ul>
-
-
-
-
             <ul>
                 <li><a class="btn-menu nav-projet" href="/" data-text="deposer un projet">deposer un projet</a>
                     <div id="div-projet">deposer un projet</div>
@@ -46,9 +32,16 @@
                 <li><a class="btn-menu nav-voir" href="/" data-text="Voir les artistes">Voir les artistes</a>
                     <div id="div-voir">Voir les artistes</div>
                 </li>
-                <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</a>
-                    <div id="div-connexion">Se connecter</div>
-                </li>
+                {% if is_granted('ROLE_USER') == false  %}
+                    <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</a>
+                        <div id="div-connexion">Se connecter</div>
+                    </li>
+                {% endif %}
+                {% if is_granted('ROLE_USER') == true  %}
+                    <li><a class="btn-menu nav-connexion" href="/logout" data-text="Se connecter">Se Déconnecter</a>
+                        <div id="div-connexion">Se déconnecter</div>
+                    </li>
+                {% endif %}
                 <li><a class="btn-menu nav-contact" href="/" data-text="Contact">Contact</a>
                     <div id="div-contact">Contact</div>
                 </li>
@@ -62,19 +55,6 @@
     </div>
 
     <footer>
-        <ul>
-            <li>© Lugh</li>
-            <li>Presse</li>
-            <li>Livre Blanc</li>
-
-        </ul>
-
-        <ul id="rs">
-            <li>Twitter</li>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Linkedin</li>
-            <li>Medium</li>
         <div id="copyright">
             <ul>
                 <li>© Lugh</li>
@@ -137,11 +117,6 @@
 
 
 
-        $(".sidebar").hover(function() {
-            $(".all-content").addClass("nav-active");
-        });
-
-
         $(document).ready(function() {
             $('.sidebar').hover(function(){
                     $('.all-content').addClass('nav-active');
@@ -160,7 +135,9 @@
         })
         $('.btn-menu').mouseout(function(){
             document.getElementById('fullscreen').classList.remove('fullscreen-hover');
-        })*/
+        })
+
+
        /*$(document).ready(function(){
            // Change this to the correct selector.
            $('nav.sidebar').midnight();

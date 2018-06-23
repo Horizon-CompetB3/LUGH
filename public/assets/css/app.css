@@ -176,6 +176,7 @@ body{
 .nav-connexion:hover + #div-connexion {
     right: 0;
     transition: 0.7s;
+}
 
 #div-contact {
     background-color: black;

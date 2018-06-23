@@ -26,23 +26,23 @@
     <div class="sidebar" id="sidebar">
         <nav>
             <ul>
-                <li><a class="btn-menu nav-projet" href="/" data-text="deposer un projet">deposer un projet</a>
+                <li><span class="btn-menu nav-projet" href="/" data-text="deposer un projet">deposer un projet</span>
                     <div id="div-projet">deposer un projet</div>
                 </li>
-                <li><a class="btn-menu nav-voir" href="/" data-text="Voir les artistes">Voir les artistes</a>
+                <li><span class="btn-menu nav-voir" href="/" data-text="Voir les artistes">Voir les artistes</span>
                     <div id="div-voir">Voir les artistes</div>
                 </li>
                 {% if is_granted('ROLE_USER') == false  %}
-                    <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</a>
-                        <div id="div-connexion">Se connecter</div>
+                    <li><span class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</span>
+                        <div id="div-connexion"><a href="/login" data-text="Se connecter">Se connecter</a></div>
                     </li>
                 {% endif %}
                 {% if is_granted('ROLE_USER') == true  %}
-                    <li><a class="btn-menu nav-connexion" href="/logout" data-text="Se connecter">Se Déconnecter</a>
+                    <li><span class="btn-menu nav-connexion" href="/logout" data-text="Se connecter">Se Déconnecter</span>
                         <div id="div-connexion">Se déconnecter</div>
                     </li>
                 {% endif %}
-                <li><a class="btn-menu nav-contact" href="/" data-text="Contact">Contact</a>
+                <li><span class="btn-menu nav-contact" href="/" data-text="Contact">Contact</span>
                     <div id="div-contact">Contact</div>
                 </li>
             </ul>

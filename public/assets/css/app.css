@@ -36,7 +36,7 @@ body{
     margin-bottom: 5vh;
 }
 
-.sidebar nav ul li a {
+.sidebar nav ul li span {
     display: block;
     text-decoration: none;
     margin: 0 auto;
@@ -125,7 +125,29 @@ body{
 
 }
 
+#div-projet a {
+    color: white;
+    text-decoration: none;
+    width: 95%;
+}
 
+#div-voir a {
+    color: white;
+    text-decoration: none;
+    width: 95%;
+}
+
+#div-connexion a {
+    color: white;
+    text-decoration: none;
+    width: 95%;
+}
+
+#div-contact a {
+    color: white;
+    text-decoration: none;
+    width: 95%;
+}
 
 #div-voir {
     background-color: black;

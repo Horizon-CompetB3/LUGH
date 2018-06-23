@@ -32,17 +32,10 @@ $(document).ready(function() {
     $('#fullpage').fullpage();
 });
 
-<<<<<<< HEAD
 function swapForm() {
     document.getElementById('form-add-projets-1').classList.add('none');
     document.getElementById('form-add-projets-2').classList.remove('none');
 }
-=======
 
 
-
-
-
-
->>>>>>> c657607edc13518d9f9002a81b572fd83ead44c0
 

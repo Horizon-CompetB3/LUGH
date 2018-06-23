@@ -3,13 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Projets;
+use App\Form\ProjetsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class AddProjetController extends Controller
 {
@@ -23,19 +20,7 @@ class AddProjetController extends Controller
 // creates a projets and gives it some dummy data for this example
         $projets = new Projets();
 
-        $form = $this->createFormBuilder($projets)
-            ->add('name', TextType::class)
-            ->add('type', TextType::class)
-            ->add('entreprise', TextType::class)
-            ->add('orientation', TextType::class)
-            ->add('description', TextType::class)
-            ->add('budget', IntegerType::class)
-            ->add('largeur', IntegerType::class)
-            ->add('hauteur', IntegerType::class)
-            ->add('profondeur', IntegerType::class)
-            ->add('image', FileType::class, array('label' => 'Image(JPG)'))
-            ->add('save', SubmitType::class, array('label' => 'Create projets'))
-            ->getForm();
+        $form = $this->createForm(ProjetsType::class, $projets);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

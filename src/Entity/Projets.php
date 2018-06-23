@@ -24,11 +24,11 @@ class Projets
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=55, unique=true, nullable=true)
+     * @ORM\Column(type="string", length=55, nullable=true)
      */
     private $type;
     /**
-     * @ORM\Column(type="string", length=55, unique=true)
+     * @ORM\Column(type="string", length=55, nullable=true)
      */
     private $entreprise;
     /**
@@ -40,11 +40,15 @@ class Projets
      */
     private $orientation;
     /**
-     * @Assert\File(
-     *     maxSize = "1024k",
-     *     mimeTypes = {"application/jpg", "application/x-jpg"},
-     *     mimeTypesMessage = "Please upload a valid jpg"
-     * )
+     * @ORM\Column(type="string", length=64)
+     */
+    private $theme;
+
+
+    /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Please, upload the product brochure as a jpg file.")
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
      */
     private $image;
     /**
@@ -104,6 +108,21 @@ class Projets
     public function setEntreprise($entreprise)
     {
         $this->entreprise = $entreprise;
+    }
+    /**
+     * @return mixed
+     */
+    public function getTheme()
+    {
+        return $this->theme;
+    }
+
+    /**
+     * @param mixed $theme
+     */
+    public function setTheme($theme)
+    {
+        $this->theme = $theme;
     }
 
     /**

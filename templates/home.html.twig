@@ -1,7 +1,31 @@
 {% extends "base.html.twig" %}
 {% block layout_content %}
 
-
+    <div class="sidebar" id="sidebar">
+        <nav>
+            <ul>
+                <li><a class="btn-menu nav-projet" href="/" data-text="deposer un projet">deposer un projet</a>
+                    <div id="div-projet">deposer un projet</div>
+                </li>
+                <li><a class="btn-menu nav-voir" href="/" data-text="Voir les artistes">Voir les artistes</a>
+                    <div id="div-voir">Voir les artistes</div>
+                </li>
+                {% if is_granted('ROLE_USER') == false  %}
+                    <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</a>
+                        <div id="div-connexion">Se connecter</div>
+                    </li>
+                {% endif %}
+                {% if is_granted('ROLE_USER') == true  %}
+                    <li><a class="btn-menu nav-connexion" href="/logout" data-text="Se connecter">Se Déconnecter</a>
+                        <div id="div-connexion">Se déconnecter</div>
+                    </li>
+                {% endif %}
+                <li><a class="btn-menu nav-contact" href="/" data-text="Contact">Contact</a>
+                    <div id="div-contact">Contact</div>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <div id="fullpage">
 
 
@@ -14,15 +38,15 @@
         <h2>La plateforme créative qui réunit<br>
             <span class="orange">artistes</span> et <span class="blue">entreprises</span></h2>
             <div id="div-btn-artent">
-                <a href="#slide2">Je suis une entreprise</a>
-                <a href="#slide3">Je suis un artiste</a>
+                <a href="#second-section" class="js-section-scroll">Je suis une entreprise</a>
+                <a>Je suis un artiste</a>
             </div>
 
         </div>
         <div id="first-section-content-2" class="background-right"></div>
     </section>
 
-    <section id="slide2" class="section reveal" data-midnight="white" data-anchor="slide2">
+    <section id="second-section" class="section reveal" data-midnight="white" data-anchor="slide2">
 
         <div class="second-section-content">
             <div id="div-logo">
@@ -40,7 +64,7 @@
         </div>
         <div id="second-section-content-2" class="background-right"></div>
     </section>
-    <section id="slide3" class="section reveal" data-midnight="black" data-anchor="slide3">
+    <section id="third-section" class="section reveal" data-midnight="black" data-anchor="slide3">
 
         <div class="second-section-content">
             <div id="div-logo">
@@ -82,7 +106,7 @@
             <div id="five-section-content-2" class="background-right"></div>
         </section>
     <section id="fourth-section" class="section reveal" data-midnight="white" data-anchor="slide5">
-        <div id="fourth-section-content">
+        <div class="second-section-content">
             <div id="div-logo">
                 <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.6 94.4"><title>Fichier 4</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path d="M0,4.2H16.2V61H51.3V74.2H0Z"/><path d="M113.1,20.4V74.2H98.3V67.8a20.78,20.78,0,0,1-7.4,5.35A23.36,23.36,0,0,1,81.6,75Q71,75,64.8,68.9T58.6,50.8V20.4H74.2V48.5q0,13,10.9,13a11.74,11.74,0,0,0,9-3.65Q97.49,54.21,97.5,47V20.4Z"/><path d="M183.1,20.4V65.2q0,14.8-7.7,22t-22.5,7.2a56.1,56.1,0,0,1-14.8-1.9A32.33,32.33,0,0,1,126.5,87l6.2-11.2a25.36,25.36,0,0,0,8.6,4.45,34.17,34.17,0,0,0,10.4,1.65q8.1,0,12-3.65t3.85-11V64.9q-6.1,6.7-17,6.7A28.49,28.49,0,0,1,137,68.35a24.82,24.82,0,0,1-9.75-9.15,25.58,25.58,0,0,1-3.6-13.6A25.58,25.58,0,0,1,127.2,32,24.82,24.82,0,0,1,137,22.85,28.49,28.49,0,0,1,150.5,19.6q11.7,0,17.8,7.7V20.4ZM163.75,55.15a12.41,12.41,0,0,0,3.95-9.55,12.41,12.41,0,0,0-3.95-9.55,16,16,0,0,0-20.35,0,12.31,12.31,0,0,0-4,9.55,12.31,12.31,0,0,0,4,9.55,16,16,0,0,0,20.35,0Z"/><path d="M246.45,25.6q6.15,6,6.15,17.8V74.2H237V45.8q0-6.4-2.8-9.55t-8.1-3.15a12.41,12.41,0,0,0-9.4,3.65q-3.51,3.64-3.5,10.85V74.2H197.6V0h15.6V26a20.59,20.59,0,0,1,7.5-4.75,27.11,27.11,0,0,1,9.6-1.65Q240.29,19.6,246.45,25.6Z"/></g></g></svg>
             </div>

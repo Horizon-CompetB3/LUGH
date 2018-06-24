@@ -18,42 +18,18 @@
     </head>
     <!-- Google Tag Manager -->
 
-    <body>
+    <body id="body">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NGNL5R"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="sidebar" id="sidebar">
-        <nav>
-            <ul>
-                <li><a class="btn-menu nav-projet" href="/" data-text="deposer un projet">deposer un projet</a>
-                    <div id="div-projet">deposer un projet</div>
-                </li>
-                <li><a class="btn-menu nav-voir" href="/" data-text="Voir les artistes">Voir les artistes</a>
-                    <div id="div-voir">Voir les artistes</div>
-                </li>
-                {% if is_granted('ROLE_USER') == false  %}
-                    <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</a>
-                        <div id="div-connexion">Se connecter</div>
-                    </li>
-                {% endif %}
-                {% if is_granted('ROLE_USER') == true  %}
-                    <li><a class="btn-menu nav-connexion" href="/logout" data-text="Se connecter">Se Déconnecter</a>
-                        <div id="div-connexion">Se déconnecter</div>
-                    </li>
-                {% endif %}
-                <li><a class="btn-menu nav-contact" href="/" data-text="Contact">Contact</a>
-                    <div id="div-contact">Contact</div>
-                </li>
-            </ul>
-        </nav>
-    </div>
+
 
 
     {% block layout_content %}
             {% endblock %}
 
-    <footer>
+    <footer id="footer">
         <div id="copyright">
             <ul>
                 <li>© Lugh</li>

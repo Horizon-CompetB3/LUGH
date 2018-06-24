@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\UserType;
+use App\Form\CompleteType;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AddUserController extends Controller
@@ -40,5 +41,33 @@ class AddUserController extends Controller
             'controller_name' => 'AddUserController',
             'form' => $form->createView(),
 
+        ));
+    }
+
+    /**
+     * @Route("/complete-profil", name="complete-profil")
+     * @param Request $request
+     * @var User $user
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    public function CompleteProfilAction(Request $request)
+    {
+// creates a projets and gives it some dummy data for this example
+        $user = $this->getDoctrine()->getRepository(User::class);
+        $form = $this->createForm(CompleteType::class, $user);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $user = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('home');
+        }
+
+        return $this->render('Registration/addprojet.html.twig', array(
+            'form' => $form->createView(),
         ));
     }}

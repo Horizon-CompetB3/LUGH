@@ -49,10 +49,9 @@
         </nav>
     </div>
 
-    <div class="all-content">
+
     {% block layout_content %}
             {% endblock %}
-    </div>
 
     <footer>
         <div id="copyright">
@@ -77,54 +76,16 @@
 
     {% block javascripts %}
         <script src="{{ asset('assets/js/jquery.js') }}"></script>
-        <script src="{{ asset('assets/js/scrollreveal.js') }}"></script>
         <script src="{{ asset('assets/js/app.js') }}"></script>
         <script src="{{ asset('assets/js/jquery.fullpage.min.js') }}"></script>
 
 
         <script>
 
-        $(document).ready(function(){
-            $("#first-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "black");
-            });
-        });
-
-        $(document).ready(function(){
-            $("#second-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "white");
-            });
-        });
-
-
-        $(document).ready(function(){
-            $("#third-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "black");
-            });
-        });
-
-        $(document).ready(function(){
-            $("#fourth-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "white");
-            });
-        });
-
-
-        window.sr = ScrollReveal({ reset: true });
-        sr.reveal('#second-section');
-        sr.reveal('#third-section');
-        sr.reveal('#fourth-section');
 
 
 
-        $(document).ready(function() {
-            $('.sidebar').hover(function(){
-                    $('.all-content').addClass('nav-active');
-                },
-                function(){
-                    $('.all-content').removeClass('nav-active');
-                });
-        });
+
 
 
         </script>

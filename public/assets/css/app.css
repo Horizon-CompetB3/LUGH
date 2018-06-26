@@ -67,14 +67,137 @@ body{
 
 }
 
-.singe-nav {
+.singe-entreprise {
     width: 10%;
     padding: 2%;
+}
 
+.link-entreprise {
+    display: none;
+    text-decoration: none;
+    margin: -1%;
+    padding: 10px 20px;
+    position: relative;
+    color: #000;
+    font-size: 0.8vw;
+    text-transform:  uppercase;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+
+.singe-artiste {
+    width: 10%;
+    padding: 2%;
+}
+
+.link-artiste {
+    display: none;
+    text-decoration: none;
+    margin: -1%;
+    padding: 10px 20px;
+    position: relative;
+    color: #000;
+    font-size: 0.8vw;
+    text-transform:  uppercase;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+
+.singe-galerie {
+    width: 10%;
+    padding: 2%;
+}
+
+.link-galerie {
+    display: none;
+    text-decoration: none;
+    margin: -1%;
+    padding: 10px 20px;
+    position: relative;
+    color: #000;
+    font-size: 0.8vw;
+    text-transform:  uppercase;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+
+.singe-connexion {
+    width: 10%;
+    padding: 2%;
+}
+
+.link-connexion {
+    display: none;
+    text-decoration: none;
+    margin: -1%;
+    padding: 10px 20px;
+    position: relative;
+    color: #000;
+    font-size: 0.8vw;
+    text-transform:  uppercase;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+
+.singe-contact {
+    width: 10%;
+    padding: 2%;
+}
+
+.link-contact {
+    display: none;
+    text-decoration: none;
+    margin: -1%;
+    padding: 10px 20px;
+    position: relative;
+    color: #000;
+    font-size: 0.8vw;
+    text-transform:  uppercase;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
 
 .singe-active {
     display: none;
+}
+
+.link-active {
+    display: block;
 }
 
 /*
@@ -279,7 +402,7 @@ body{
 
 h1{
     margin-bottom: 0.8vw;
-
+    font-size: 2vw;
 
 }
 .orange{
@@ -790,4 +913,7 @@ input::placeholder {
     width: 100%;
     margin-top: 6%;
     margin-left: -15%;
+}
+.fp-viewing-slide2{
+    background-color: red;
 }

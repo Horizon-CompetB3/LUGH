@@ -401,24 +401,7 @@
 
 @media only screen and (min-width: 1680px) {
 
-  #first-section-content-2 {
-    width:37%;
-  }
-  #second-section-content-2 {
-    width:37%;
-  }
-  #third-section-content-2 {
-    width:37%;
-  }
-  #fourth-section-content-2 {
-    width:37%;
-  }
-  #five-section-content-2 {
-    width:37%;
-  }
-  #connexion-section-2 {
-    width:37%;
-  }
+
 
   .sidebar {
     right: 26%;

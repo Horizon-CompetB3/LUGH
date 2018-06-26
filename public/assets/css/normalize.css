@@ -1,0 +1,309 @@
+@media screen and (max-width: 679px) {
+
+  #div-logo {
+    width: 20%;
+    top: 4vw;
+    left: 4vw;
+    z-index: 3;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  #rs {
+    display: none;
+  }
+
+  #first-section-content-2{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #second-section-content-2{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #third-section-content-2{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #fourth-section-content-2{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #five-section-content-2{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  h2 {
+    font-size: 3.8vw !important;
+    line-height: 4.8vw !important;
+    line-weight: 500 !important;
+  }
+
+  #first-section-content {
+    margin-left: 5vw;
+  }
+
+  #div-btn-artent a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 3.4vw;
+    padding: 6%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border: 2px solid black;
+    text-align: center;
+  }
+
+
+
+  .second-section-content h3 {
+    font-size: 4vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .second-section-content p {
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .div-btn-proj {
+    margin-top: 9vw;
+  }
+
+  .div-btn-proj button {
+    background-color: #fff;
+    padding: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 2px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3.4vw;
+    margin-right: 2vw;
+    cursor: pointer;
+  }
+
+  .second-section-content {
+    margin-top: 60%;
+    margin-bottom: auto;
+    width: 92%;
+    margin-left: 3vw;
+  }
+
+  input::placeholder {
+    font-size: 3.6vw;
+  }
+
+  #mc-embedded-subscribe {
+    background-color: #fff;
+    padding: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 2px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3.4vw;
+    margin-right: 2vw;
+    margin-top: 13%;
+    cursor: pointer;
+    width: 60%;
+  }
+
+  #mce-EMAIL {
+    border: none;
+    border-bottom: 2px solid black;
+    width: 80%;
+    padding: 2.8%;
+  }
+
+  footer ul {
+    display: flex;
+    list-style: none;
+    font-weight: 500;
+    font-size: 3.3vw;
+    padding: 1%;
+    justify-content: space-around;
+  }
+
+  #copyright {
+    width: 70%;
+  }
+
+  .mc-field-group {
+    margin-top: 20%;
+  }
+
+
+  .nav-mobile {
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: white;
+    transition: 0.5s;
+    padding-top: 4%;
+    display: block;
+    transition: 0.5s;
+    text-align: center;
+    padding-top: 36%;
+  }
+
+   .burger-active {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  .nav-mobile a {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.5s;
+    margin-top: 10%;
+}
+
+  .closeButton {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #818181;
+    display: block;
+  }
+
+  #button-burger {
+    transition: 0.5s;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 2%;
+    z-index: 3;
+  }
+
+  .nav-burger {
+    cursor: pointer;
+    font-size: 40px;
+  }
+
+
+
+  /* PAGE LOGIN ET INSCRIPTION */
+
+
+  #form-co{
+    width: 80%;
+    margin: auto;
+    margin-top: 4%;
+  }
+
+  #form-ins{
+    width: 20%;
+    margin: auto;
+  }
+
+  .form-group-co input{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 95%;
+    padding: 2.8%;
+  }
+
+  #form-co h2{
+    font-size: 4vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+    text-transform: uppercase;
+  }
+
+  #section-co{
+    display: flex;
+    height: 100vh;
+  }
+
+  #section-ins{
+    display: flex;
+    height: 100vh;
+  }
+
+  .form-group-co button {
+    background-color: #fff;
+    padding: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 2px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 3.4vw;
+    margin-left: 30vw;
+    margin-top: 13%;
+    cursor: pointer;
+    width: 60%;
+  }
+
+
+  .link-co {
+    text-decoration: underline;
+    text-align: right;
+    margin: auto;
+    margin-right: 0;
+    color: #679bd7;
+    margin-top: 3%;
+    display: block;
+    width: 51%;
+    font-size: 3vw;
+  }
+
+  .inscription-co {
+    text-decoration: none;
+    color: black;
+    margin-top: 30%;
+    display: block;
+    width: 100%;
+    font-size: 3.5vw;
+  }
+
+
+
+}
+
+
+

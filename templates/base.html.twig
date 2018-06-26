@@ -2,12 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Lugh{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
             <link rel="stylesheet" href="{{ asset('assets/css/jquery.fullpage.css') }}">
-
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
             <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -18,43 +19,78 @@
     </head>
     <!-- Google Tag Manager -->
 
-    <body>
+    <body id="body">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NGNL5R"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+
     <div class="sidebar" id="sidebar">
         <nav>
             <ul>
-                <li><a class="btn-menu nav-projet" href="/" data-text="deposer un projet">deposer un projet</a>
-                    <div id="div-projet">deposer un projet</div>
+                <li><a class="btn-menu nav-projet" href="/" data-text="deposer un projet">
+                        <svg class="singe-nav" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.42 158.42"><defs><style>.cls-1{fill:#242121;}</style></defs><title>entreprise</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1-2"><g id="Group-Copy-3"><g id="Page-1"><path id="Fill-1" d="M165.47,100.78A78.73,78.73,0,0,0,164,59.66c11.51,0,21.21,7.7,22.24,18.2,1.12,11.29-8.18,21.53-20.78,22.92m-21.17,2.65a31.25,31.25,0,0,1,2.11,11.27c0,21.43-21.89,38.8-48.88,38.8s-48.87-17.37-48.87-38.8a31.54,31.54,0,0,1,2-11,32.31,32.31,0,0,1-14.2-26.93c0-17.7,13.85-32,30.94-32,14.28,0,26.26,10,29.83,23.65C100.78,54.8,112.76,44.77,127,44.77c17.09,0,30.94,14.35,30.94,32a32.37,32.37,0,0,1-13.68,26.61M27.93,83.94a78.48,78.48,0,0,0,1.59,15.74c-11.45-1.2-20.34-9.9-20.34-20.46,0-11.34,10.26-20.54,22.93-20.6a78.16,78.16,0,0,0-4.18,25.32M168.12,50.42a24.1,24.1,0,0,0-7,1.06c-9.53-20.85-28-36.29-50.07-40.82l2.42-4.74L101.2,9.27,107.29,0s-33.63,5.38-55,26.75A74.17,74.17,0,0,0,34,51.67a24.75,24.75,0,0,0-7.68-1.25C11.77,50.42,0,63.24,0,79.05s11.77,28.63,26.3,28.63a24.38,24.38,0,0,0,4.35-.42C39.93,137,66.39,158.42,97.6,158.42s57.6-21.39,66.92-51a24.06,24.06,0,0,0,3.6.3c14.53,0,26.3-12.81,26.3-28.63s-11.77-28.63-26.3-28.63" transform="translate(0 0)"/></g><circle id="Oval-2" class="cls-1" cx="129" cy="77" r="11"/><circle id="Oval-2-Copy" class="cls-1" cx="66" cy="77" r="11"/></g><path id="Path-4" d="M77,115h41q-10.25,23-20.5,23T77,115Z" transform="translate(0 0)"/></g></g></svg>
+                    </a>
+                    <div id="div-projet">Entreprise</div>
                 </li>
-                <li><a class="btn-menu nav-voir" href="/" data-text="Voir les artistes">Voir les artistes</a>
-                    <div id="div-voir">Voir les artistes</div>
+                <li><a class="btn-menu nav-voir" href="/" data-text="Voir les artistes">
+                        <svg class="singe-nav" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.42 158.42"><defs><style>.cls-1{fill:#242121;}.cls-2{fill:none;stroke:#020202;stroke-width:3px;}</style></defs><title>artiste</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1-2"><g id="Group-Copy-4"><g id="Page-1"><path id="Fill-1" d="M165.47,100.78A78.73,78.73,0,0,0,164,59.66c11.51,0,21.21,7.7,22.24,18.2,1.12,11.29-8.18,21.53-20.78,22.92m-21.17,2.65a31.25,31.25,0,0,1,2.11,11.27c0,21.43-21.89,38.8-48.88,38.8s-48.87-17.37-48.87-38.8a31.54,31.54,0,0,1,2-11,32.31,32.31,0,0,1-14.2-26.93c0-17.7,13.85-32,30.94-32,14.28,0,26.26,10,29.83,23.65C100.78,54.8,112.76,44.77,127,44.77c17.09,0,30.94,14.35,30.94,32a32.37,32.37,0,0,1-13.68,26.61M27.93,83.94a78.48,78.48,0,0,0,1.59,15.74c-11.45-1.2-20.34-9.9-20.34-20.46,0-11.34,10.26-20.54,22.93-20.6a78.16,78.16,0,0,0-4.18,25.32M168.12,50.42a24.1,24.1,0,0,0-7,1.06c-9.53-20.85-28-36.29-50.07-40.82l2.42-4.74L101.2,9.27,107.29,0s-33.63,5.38-55,26.75A74.17,74.17,0,0,0,34,51.67a24.75,24.75,0,0,0-7.68-1.25C11.77,50.42,0,63.24,0,79.05s11.77,28.63,26.3,28.63a24.38,24.38,0,0,0,4.35-.42C39.93,137,66.39,158.42,97.6,158.42s57.6-21.39,66.92-51a24.06,24.06,0,0,0,3.6.3c14.53,0,26.3-12.81,26.3-28.63s-11.77-28.63-26.3-28.63" transform="translate(0 0)"/></g><circle id="Oval-2-Copy" class="cls-1" cx="66" cy="77" r="11"/></g><path id="Path-4-Copy" d="M77,115h41q-10.25,23-20.5,23T77,115Z" transform="translate(0 0)"/><path id="Path-3" class="cls-2" d="M114,81q14-14,25,0" transform="translate(0 0)"/></g></g></svg>
+                    </a>
+                    <div id="div-voir">Artistes</div>
+                </li>
+                <li><a class="btn-menu nav-galerie" href="/" data-text="Galerie">
+                        <svg class="singe-nav" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.42 158.42"><defs><style>.cls-1,.cls-2{fill:none;stroke-width:3px;}.cls-1{stroke:#020202;}.cls-2{stroke:#000;}</style></defs><title>galerie</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1-2"><g id="Group-5"><g id="Group-4-Copy"><g id="Group-Copy-2"><g id="Page-1"><path id="Fill-1" d="M165.47,100.78A78.73,78.73,0,0,0,164,59.66c11.51,0,21.21,7.7,22.24,18.2,1.12,11.29-8.18,21.53-20.78,22.92m-21.17,2.65a31.25,31.25,0,0,1,2.11,11.27c0,21.43-21.89,38.8-48.88,38.8s-48.87-17.37-48.87-38.8a31.54,31.54,0,0,1,2-11,32.31,32.31,0,0,1-14.2-26.93c0-17.7,13.85-32,30.94-32,14.28,0,26.26,10,29.83,23.65C100.78,54.8,112.76,44.77,127,44.77c17.09,0,30.94,14.35,30.94,32a32.37,32.37,0,0,1-13.68,26.61M27.93,83.94a78.48,78.48,0,0,0,1.59,15.74c-11.45-1.2-20.34-9.9-20.34-20.46,0-11.34,10.26-20.54,22.93-20.6a78.16,78.16,0,0,0-4.18,25.32M168.12,50.42a24.1,24.1,0,0,0-7,1.06c-9.53-20.85-28-36.29-50.07-40.82l2.42-4.74L101.2,9.27,107.29,0s-33.63,5.38-55,26.75A74.17,74.17,0,0,0,34,51.67a24.75,24.75,0,0,0-7.68-1.25C11.77,50.42,0,63.24,0,79.05s11.77,28.63,26.3,28.63a24.38,24.38,0,0,0,4.35-.42C39.93,137,66.39,158.42,97.6,158.42s57.6-21.39,66.92-51a24.06,24.06,0,0,0,3.6.3c14.53,0,26.3-12.81,26.3-28.63s-11.77-28.63-26.3-28.63" transform="translate(0 0)"/></g><path id="Path-3" class="cls-1" d="M114,81q14-14,25,0" transform="translate(0 0)"/><path id="Path-3-2" class="cls-1" d="M54,81q14-14,25,0" transform="translate(0 0)"/></g></g><path id="Path-2-Copy-2" class="cls-2" d="M75,127.05q22.34,18.09,45.69,0" transform="translate(0 0)"/></g></g></g></svg>
+                    </a>
+                    <div id="div-galerie">Galerie</div>
+
                 </li>
                 {% if is_granted('ROLE_USER') == false  %}
-                    <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">Se connecter</a>
+                    <li><a class="btn-menu nav-connexion" href="/login" data-text="Se connecter">
+                            <svg class="singe-nav" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.42 158.42"><defs><style>.cls-1{fill:#242121;}</style></defs><title>espace</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1-2"><g id="Group-Copy-6"><g id="Page-1"><path id="Fill-1" d="M165.47,100.78A78.73,78.73,0,0,0,164,59.66c11.51,0,21.21,7.7,22.24,18.2,1.12,11.29-8.18,21.53-20.78,22.92m-21.17,2.65a31.25,31.25,0,0,1,2.11,11.27c0,21.43-21.89,38.8-48.88,38.8s-48.87-17.37-48.87-38.8a31.54,31.54,0,0,1,2-11,32.31,32.31,0,0,1-14.2-26.93c0-17.7,13.85-32,30.94-32,14.28,0,26.26,10,29.83,23.65C100.78,54.8,112.76,44.77,127,44.77c17.09,0,30.94,14.35,30.94,32a32.37,32.37,0,0,1-13.68,26.61M27.93,83.94a78.48,78.48,0,0,0,1.59,15.74c-11.45-1.2-20.34-9.9-20.34-20.46,0-11.34,10.26-20.54,22.93-20.6a78.16,78.16,0,0,0-4.18,25.32M168.12,50.42a24.1,24.1,0,0,0-7,1.06c-9.53-20.85-28-36.29-50.07-40.82l2.42-4.74L101.2,9.27,107.29,0s-33.63,5.38-55,26.75A74.17,74.17,0,0,0,34,51.67a24.75,24.75,0,0,0-7.68-1.25C11.77,50.42,0,63.24,0,79.05s11.77,28.63,26.3,28.63a24.38,24.38,0,0,0,4.35-.42C39.93,137,66.39,158.42,97.6,158.42s57.6-21.39,66.92-51a24.06,24.06,0,0,0,3.6.3c14.53,0,26.3-12.81,26.3-28.63s-11.77-28.63-26.3-28.63" transform="translate(0 0)"/></g><circle id="Oval-2-Copy" class="cls-1" cx="66" cy="77" r="11"/><circle id="Oval-2-Copy-2" class="cls-1" cx="127" cy="77" r="11"/><ellipse id="Oval-2-Copy-9" class="cls-1" cx="98" cy="122" rx="9" ry="14"/></g></g></g></svg>
+                        </a>
                         <div id="div-connexion">Se connecter</div>
                     </li>
                 {% endif %}
                 {% if is_granted('ROLE_USER') == true  %}
-                    <li><a class="btn-menu nav-connexion" href="/logout" data-text="Se connecter">Se Déconnecter</a>
-                        <div id="div-connexion">Se déconnecter</div>
+                    <li><a class="btn-menu nav-connexion" href="/" data-text="Se connecter">
+                            <svg class="singe-nav" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.42 158.42"><defs><style>.cls-1,.cls-2{fill:none;stroke-width:3px;}.cls-1{stroke:#020202;}.cls-2{stroke:#000;}</style></defs><title>galerie</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1-2"><g id="Group-5"><g id="Group-4-Copy"><g id="Group-Copy-2"><g id="Page-1"><path id="Fill-1" d="M165.47,100.78A78.73,78.73,0,0,0,164,59.66c11.51,0,21.21,7.7,22.24,18.2,1.12,11.29-8.18,21.53-20.78,22.92m-21.17,2.65a31.25,31.25,0,0,1,2.11,11.27c0,21.43-21.89,38.8-48.88,38.8s-48.87-17.37-48.87-38.8a31.54,31.54,0,0,1,2-11,32.31,32.31,0,0,1-14.2-26.93c0-17.7,13.85-32,30.94-32,14.28,0,26.26,10,29.83,23.65C100.78,54.8,112.76,44.77,127,44.77c17.09,0,30.94,14.35,30.94,32a32.37,32.37,0,0,1-13.68,26.61M27.93,83.94a78.48,78.48,0,0,0,1.59,15.74c-11.45-1.2-20.34-9.9-20.34-20.46,0-11.34,10.26-20.54,22.93-20.6a78.16,78.16,0,0,0-4.18,25.32M168.12,50.42a24.1,24.1,0,0,0-7,1.06c-9.53-20.85-28-36.29-50.07-40.82l2.42-4.74L101.2,9.27,107.29,0s-33.63,5.38-55,26.75A74.17,74.17,0,0,0,34,51.67a24.75,24.75,0,0,0-7.68-1.25C11.77,50.42,0,63.24,0,79.05s11.77,28.63,26.3,28.63a24.38,24.38,0,0,0,4.35-.42C39.93,137,66.39,158.42,97.6,158.42s57.6-21.39,66.92-51a24.06,24.06,0,0,0,3.6.3c14.53,0,26.3-12.81,26.3-28.63s-11.77-28.63-26.3-28.63" transform="translate(0 0)"/></g><path id="Path-3" class="cls-1" d="M114,81q14-14,25,0" transform="translate(0 0)"/><path id="Path-3-2" class="cls-1" d="M54,81q14-14,25,0" transform="translate(0 0)"/></g></g><path id="Path-2-Copy-2" class="cls-2" d="M75,127.05q22.34,18.09,45.69,0" transform="translate(0 0)"/></g></g></g></svg>
+
+                        </a>
+                        <div id="div-connexion">Mon espace</div>
                     </li>
                 {% endif %}
-                <li><a class="btn-menu nav-contact" href="/" data-text="Contact">Contact</a>
+                <li><a class="btn-menu nav-contact" href="/" data-text="Contact">
+                        <svg class="singe-nav" id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.42 158.42"><defs><style>.cls-1{fill:#242121;}.cls-2{fill:none;stroke:#000;stroke-width:3px;}</style></defs><title>contact</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1-2"><g id="Group-3"><g id="Page-1-Copy-2"><path id="Fill-1" d="M165.47,100.78A78.73,78.73,0,0,0,164,59.66c11.51,0,21.21,7.7,22.24,18.2,1.12,11.29-8.18,21.53-20.78,22.92m-21.17,2.65a31.25,31.25,0,0,1,2.11,11.27c0,21.43-21.89,38.8-48.88,38.8s-48.87-17.37-48.87-38.8a31.54,31.54,0,0,1,2-11,32.31,32.31,0,0,1-14.2-26.93c0-17.7,13.85-32,30.94-32,14.28,0,26.26,10,29.83,23.65C100.78,54.8,112.76,44.77,127,44.77c17.09,0,30.94,14.35,30.94,32a32.37,32.37,0,0,1-13.68,26.61M27.93,83.94a78.48,78.48,0,0,0,1.59,15.74c-11.45-1.2-20.34-9.9-20.34-20.46,0-11.34,10.26-20.54,22.93-20.6a78.16,78.16,0,0,0-4.18,25.32M168.12,50.42a24.1,24.1,0,0,0-7,1.06c-9.53-20.85-28-36.29-50.07-40.82l2.42-4.74L101.2,9.27,107.29,0s-33.63,5.38-55,26.75A74.17,74.17,0,0,0,34,51.67a24.75,24.75,0,0,0-7.68-1.25C11.77,50.42,0,63.24,0,79.05s11.77,28.63,26.3,28.63a24.38,24.38,0,0,0,4.35-.42C39.93,137,66.39,158.42,97.6,158.42s57.6-21.39,66.92-51a24.06,24.06,0,0,0,3.6.3c14.53,0,26.3-12.81,26.3-28.63s-11.77-28.63-26.3-28.63" transform="translate(0 0)"/></g><circle id="Oval-2-Copy-6" class="cls-1" cx="66" cy="77" r="11"/><circle id="Oval-2-Copy-8" class="cls-1" cx="127" cy="77" r="11"/><path id="Path-2-Copy" class="cls-2" d="M98,135q17,0,21-17" transform="translate(0 0)"/></g></g></g></svg>
+                    </a>
                     <div id="div-contact">Contact</div>
                 </li>
             </ul>
         </nav>
     </div>
 
-    <div class="all-content">
-    {% block layout_content %}
-            {% endblock %}
+    <div id="nav-mobile" class="nav-mobile">
+        <div class="closeButton">&times</div>
+        <a href="">Entreprise</a>
+        <a href="">Artiste</a>
+        <a href="">Galerie</a>
+        <a href="">Se connecter</a>
+        <a href="">Contact</a>
+    </div>
+    <div id="button-burger">
+        <div class="nav-burger">&#9776;</div>
     </div>
 
-    <footer>
+
+    <div id="div-logo">
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.6 94.4"><title>Fichier 4</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path d="M0,4.2H16.2V61H51.3V74.2H0Z"/><path d="M113.1,20.4V74.2H98.3V67.8a20.78,20.78,0,0,1-7.4,5.35A23.36,23.36,0,0,1,81.6,75Q71,75,64.8,68.9T58.6,50.8V20.4H74.2V48.5q0,13,10.9,13a11.74,11.74,0,0,0,9-3.65Q97.49,54.21,97.5,47V20.4Z"/><path d="M183.1,20.4V65.2q0,14.8-7.7,22t-22.5,7.2a56.1,56.1,0,0,1-14.8-1.9A32.33,32.33,0,0,1,126.5,87l6.2-11.2a25.36,25.36,0,0,0,8.6,4.45,34.17,34.17,0,0,0,10.4,1.65q8.1,0,12-3.65t3.85-11V64.9q-6.1,6.7-17,6.7A28.49,28.49,0,0,1,137,68.35a24.82,24.82,0,0,1-9.75-9.15,25.58,25.58,0,0,1-3.6-13.6A25.58,25.58,0,0,1,127.2,32,24.82,24.82,0,0,1,137,22.85,28.49,28.49,0,0,1,150.5,19.6q11.7,0,17.8,7.7V20.4ZM163.75,55.15a12.41,12.41,0,0,0,3.95-9.55,12.41,12.41,0,0,0-3.95-9.55,16,16,0,0,0-20.35,0,12.31,12.31,0,0,0-4,9.55,12.31,12.31,0,0,0,4,9.55,16,16,0,0,0,20.35,0Z"/><path d="M246.45,25.6q6.15,6,6.15,17.8V74.2H237V45.8q0-6.4-2.8-9.55t-8.1-3.15a12.41,12.41,0,0,0-9.4,3.65q-3.51,3.64-3.5,10.85V74.2H197.6V0h15.6V26a20.59,20.59,0,0,1,7.5-4.75,27.11,27.11,0,0,1,9.6-1.65Q240.29,19.6,246.45,25.6Z"/></g></g></svg>
+    </div>
+
+
+    {% block layout_content %}
+            {% endblock %}
+
+    <footer id="footer">
         <div id="copyright">
             <ul>
                 <li>© Lugh</li>
@@ -77,54 +113,28 @@
 
     {% block javascripts %}
         <script src="{{ asset('assets/js/jquery.js') }}"></script>
-        <script src="{{ asset('assets/js/scrollreveal.js') }}"></script>
         <script src="{{ asset('assets/js/app.js') }}"></script>
         <script src="{{ asset('assets/js/jquery.fullpage.min.js') }}"></script>
 
 
         <script>
 
-        $(document).ready(function(){
-            $("#first-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "black");
+            $(document).ready(function(){
+                if ( $('body').hasClass('fp-viewing-slide2') ) {
+                    $('.singe-nav').classList.add('singe-active');
+                }
+                else {
+                    $('.singe-nav').classList.remove('singe-active');
+                }
             });
-        });
-
-        $(document).ready(function(){
-            $("#second-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "white");
-            });
-        });
 
 
-        $(document).ready(function(){
-            $("#third-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "black");
-            });
-        });
-
-        $(document).ready(function(){
-            $("#fourth-section").hover(function(){
-                $(".sidebar nav ul li a").css("color", "white");
-            });
-        });
-
-
-        window.sr = ScrollReveal({ reset: true });
-        sr.reveal('#second-section');
-        sr.reveal('#third-section');
-        sr.reveal('#fourth-section');
-
-
-
-        $(document).ready(function() {
-            $('.sidebar').hover(function(){
-                    $('.all-content').addClass('nav-active');
-                },
-                function(){
-                    $('.all-content').removeClass('nav-active');
-                });
-        });
+        $('.nav-burger').on('click', function() {
+            $('.nav-mobile').addClass('burger-active');
+        })
+        $('.closeButton').on('click', function() {
+            $('.nav-mobile').removeClass('burger-active');
+        })
 
 
         </script>

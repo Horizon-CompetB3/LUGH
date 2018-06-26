@@ -93,12 +93,51 @@
 
 
   .second-section-content h3 {
+     font-size: 4vw;
+     line-height: 5.5vw;
+     margin-bottom: 3vw;
+   }
+
+  .third-section-content h3 {
+    font-size: 4vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .five-section-content h3 {
+    font-size: 4vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .fourth-section-content h3 {
     font-size: 4vw;
     line-height: 5.5vw;
     margin-bottom: 3vw;
   }
 
   .second-section-content p {
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .third-section-content p {
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .five-section-content p {
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .fourth-section-content p {
     font-size: 3.5vw;
     line-height: 4.5vw;
     width: 100%;
@@ -128,6 +167,36 @@
     width: 92%;
     margin-left: 3vw;
   }
+
+
+  .third-section-content {
+    margin-top: 60%;
+    margin-bottom: auto;
+    width: 92%;
+    margin-left: 3vw;
+  }
+
+  .five-section-content {
+    margin-top: 60%;
+    margin-bottom: auto;
+    width: 92%;
+    margin-left: 3vw;
+  }
+
+  .fourth-section-content {
+    margin-top: 60%;
+    margin-bottom: auto;
+    width: 92%;
+    margin-left: 3vw;
+  }
+
+  .connexion-section-content {
+    margin-top: 60%;
+    margin-bottom: auto;
+    width: 92%;
+    margin-left: 3vw;
+  }
+
 
   input::placeholder {
     font-size: 3.6vw;

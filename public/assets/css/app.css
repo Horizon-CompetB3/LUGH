@@ -486,18 +486,100 @@ h1{
     margin-bottom: auto;
     width: 70%;
     margin-left: 3vw;
+    opacity: 0;
+    transition: 1s;
 }
+
+.third-section-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+    margin-left: 3vw;
+    opacity: 0;
+    transition: 1s;
+}
+
+.five-section-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+    margin-left: 3vw;
+    opacity: 0;
+    transition: 1s;
+}
+
+.fourth-section-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+    margin-left: 3vw;
+    opacity: 0;
+    transition: 1s;
+}
+
+.connexion-section-content{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+    margin-left: 3vw;
+    opacity: 1;
+}
+
+
 .second-section-content h3{
     font-size: 1.9vw;
     line-height: 2.8vw;
     margin-bottom: 3vw;
 }
+
+.third-section-content h3{
+    font-size: 1.9vw;
+    line-height: 2.8vw;
+    margin-bottom: 3vw;
+}
+
+.five-section-content h3{
+    font-size: 1.9vw;
+    line-height: 2.8vw;
+    margin-bottom: 3vw;
+}
+
+.fourth-section-content h3{
+    font-size: 1.9vw;
+    line-height: 2.8vw;
+    margin-bottom: 3vw;
+}
+
 .second-section-content p{
     font-size: 1vw;
     line-height: 1.5vw;
     width: 50%;
     font-weight: 500;
 }
+
+.third-section-content p{
+    font-size: 1vw;
+    line-height: 1.5vw;
+    width: 50%;
+    font-weight: 500;
+}
+
+.five-section-content p{
+    font-size: 1vw;
+    line-height: 1.5vw;
+    width: 50%;
+    font-weight: 500;
+}
+
+.fourth-section-content p{
+    font-size: 1vw;
+    line-height: 1.5vw;
+    width: 50%;
+    font-weight: 500;
+}
+
+
+
 #second-section-content-2{
     background-image: url("../img/IMG2-HOME-ENTREPRISE.jpg");
     width: 30%;
@@ -546,7 +628,11 @@ h1{
     font-weight: 600;
 }
 
-
+.position-finale {
+    opacity: 1;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
 
 
 
